@@ -3,20 +3,21 @@ import React from 'react'
 export default function About() {
   return (
     <>
-        <section className='bg-white'>
+        <section className='bg-white' id="about-section">
             <div className='text-4xl text-center font-medium'>
                 About Me
             </div>
             <div className='flex flex-col items-center'>
-                <div className='w-96 h-96 relative m-3'>
-                    <div className='bg-grey w-80 h-80 absolute'></div>
-                    <div className='bg-blue w-80 h-80 absolute bottom-0 right-0'></div>
+                <div className='w-fit h-fit m-3 top-9'>
+                    <div className='w-80 h-fit'>
+                        <img src="images\IMG_20230706_192946829_HDR_2-removebg-preview.png" alt="" className='h-full w-full rounded-r-3xl'/>
+                    </div>
                 </div>
                 <div className= 'text-center m-3'>
                     <p className='text-blue text-2xl m-2'>
-                        Unlocking the digital world one line of code at a time.
-                        Passionate about creating visually stunning and user-friendly websites.
-                        Let's turn your online dreams into reality!
+                    Passionate about merging creativity and technology.
+                    Aspiring web designer, developer, and physics enthusiast.
+                    Constantly seeking opportunities to learn and create impactful digital experiences.
                     </p>
                     <ul className='flex flex-wrap justify-center'>
                         <li className='bg-blue w-fit m-1'>
