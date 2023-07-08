@@ -13,7 +13,11 @@ export default {
       'yellow': '#f2b63d',
       'white': '#ffffff',
       'grey': '#D9D9D9',
-      'sky-blue': '#33CEFF'
+      'sky-blue': '#33CEFF',
+      'orange': '#e34c26',
+      'light-blue': '#264de4',
+      'green': '#3c873a',
+      'white-blue': '#88dded'
     }
   },
   plugins: [],
