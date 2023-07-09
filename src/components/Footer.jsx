@@ -26,6 +26,13 @@ export default function Footer() {
             <div className='text-white text-4xl'>
                 Send me a message!
             </div>
+            <div className=' hover:border-b border-white'>
+                <a href="#home-section">
+                    <p className='text-white text-2xl'>
+                        Go up!
+                    </p>
+                </a>
+            </div>
         </div>
         <form ref={form} onSubmit={sendEmail} action="" className='w-80 h-fit rounded flex flex-col lg:w-5/12 lg:flex-wrap lg:flex-row lg:m-5'>
             <div className='w-full lg:w-1/2 lg:mr-auto lg:pr-1'>

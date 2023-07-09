@@ -4,7 +4,6 @@ export default function About() {
   return (
     <>
         <section className='bg-white' id="about-section">
-            
             <div className='flex flex-col items-center lg:flex-row'>
                 <div className='w-fit h-fit m-6 top-9'>
                     <div className='w-80 h-fit'>
@@ -17,9 +16,6 @@ export default function About() {
                     </div>
                     <div className='bg-grey p-1 rounded-l-3xl'>
                         <p className='text-blue text-2xl m-2'>
-                            Web developer and aspiring web designer honing my skills in the world of coding and design.
-                            Currently pursuing a degree in physics to deepen my understanding of the universe. Committed to continuous learning and growth.
-                            Let's collaborate and create innovative solutions together.
                             I am a diligent web developer with a strong inclination towards web design, constantly sharpening my coding and design abilities.
                             Concurrently, I am wholeheartedly dedicated to expanding my knowledge of the universe through my pursuit of a physics degree.
                             My commitment to perpetually enhancing my skills and expertise is unwavering. 
