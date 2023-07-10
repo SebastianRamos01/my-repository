@@ -7,13 +7,11 @@ import Works from "./components/Works"
 function App() {
   return (
     <>
-      <body className="">
         <Header></Header>
         <Main></Main>
         <About></About>
         <Works></Works>
         <Footer></Footer>
-      </body>
     </>
   )
 }

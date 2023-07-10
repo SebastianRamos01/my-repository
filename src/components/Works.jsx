@@ -8,25 +8,20 @@ export default function Works() {
         </div>
         <ul className=' my-2'>
             <li className='flex flex-col items-center m-5'>
-                <div className='w-full flex justify-center m-2'>
-                    <p className='text-3xl mx-1'>
-                        Mercado Liebre
-                    </p>
-                    <div className='mx-4 flex lg:text-4xl'>
-                        <div className='text-3xl'>
-                            <a href="">
-                                <ion-icon name="link-outline"></ion-icon>
-                            </a>
-                        </div>
-                        <div className='text-3xl lg:text-4xl'>
-                            <a href="https://github.com/SebastianRamos01/Proyecto-Mercado-Liebre" className='px-1'>
-                                <ion-icon name="logo-github"></ion-icon>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 <div className='w-11/12 lg:m-1 lg:w-10/12'>
                     <img src="images\Captura de pantalla 2023-07-05 224711.png" alt="" className='w-full'/>
+                </div>
+                <div className='w-fit flex items-center justify-center p-1 m-2 bg-grey rounded-md'>
+                    <a href="https://proyecto-mercado-liebre-ypc4.onrender.com" className='p-1 mx-2 hover:border-b border-blue'>
+                        <p className='text-3xl font-semibold'>
+                            Mercado Liebre
+                        </p>
+                    </a>
+                    <div className='text-3xl lg:text-4xl h-fit opacity-50 hover:opacity-100'>
+                        <a href="https://github.com/SebastianRamos01/Proyecto-Mercado-Liebre" className='flex p-1 h-fit'>
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                    </div>
                 </div>
                 <div className=' text-center m-3 bg-grey rounded-xl p-2'>
                     <p className='text-xl'>
@@ -55,25 +50,20 @@ export default function Works() {
                 </ul>
             </li>
             <li className='flex flex-col items-center m-5'>
-                <div className='w-full flex justify-center m-2'>
-                    <p className='text-3xl mx-4 lg:mx-8'>
-                        NailStore
-                    </p>
-                    <div className='mx-4 flex'>
-                        <div className='text-3xl lg:text-4xl'>
-                            <a href="">
-                                <ion-icon name="link-outline"></ion-icon>
-                            </a>
-                        </div>
-                        <div className='text-3xl lg:text-4xl'>
-                            <a href="https://github.com/SebastianRamos01/E-commerceNailStore" className='px-1'>
-                                <ion-icon name="logo-github"></ion-icon>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 <div className='w-11/12'>
                     <img src="images\NailStore-home.png" alt="" className='w-full'/>
+                </div>
+                <div className='w-fit flex justify-center p-1 m-2 bg-grey rounded-md'>
+                    <a href="" className='p-1 mx-2 hover:border-b border-blue'>
+                        <p className='text-3xl font-semibold'>
+                            Nailstore
+                        </p>
+                    </a>
+                    <div className='text-3xl lg:text-4xl h-fit opacity-50 hover:opacity-100'>
+                        <a href="https://github.com/SebastianRamos01/E-commerceNailStore" className='flex p-1 h-fit'>
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                    </div>
                 </div>
                 <div className=' text-center m-3 bg-grey rounded-xl p-2'>
                     <p className='text-xl'>
