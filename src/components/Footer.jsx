@@ -1,68 +1,32 @@
-import React, { useRef} from 'react'
-import emailjs from '@emailjs/browser';
+import React from 'react'
+import Form from './Form'
+import { motion } from 'framer-motion'
+import Separator from './Separator'
 
 export default function Footer() {
-
-    const form = useRef();
-
-    const sendEmail = (e) => {
-        e.preventDefault();
-
-        emailjs.sendForm('service_h4dk1eb', 'template_w069iov', form.current, 'pQNCBaINLLl9nzZxJ')
-        .then((result) => {
-            console.log(result.text);
-            form.current.reset()
-            }, (error) => {
-          console.log(error.text);
-      });
-    }
-
   return (
-    <footer className='h-screen bg-blue flex justify-center items-center flex-col lg:flex-row lg:justify-evenly' id='contact-section'>
-        <div className='flex flex-col items-center'>
-            <div className='text-white text-2xl opacity-50'>
+    <footer className='relative lg:h-screen bg-white flex justify-center items-center flex-col lg:flex-row lg:justify-evenly' id='contact-section'>
+        <Separator></Separator>
+        <motion.div
+             transition={{ duration: 1.5}}
+             initial={{ x: -60, opacity:0 }}
+             whileInView={{ x: 0, opacity:1 }}
+            className='flex flex-col items-center m-3 font-bebas'>
+            <div className='text-blue text-2xl opacity-50'>
                 Your interested?
             </div>
-            <div className='text-white text-4xl'>
+            <div className='text-blue text-4xl'>
                 Send me a message!
             </div>
-            <div className=' hover:border-b border-white'>
+            <div className='text-white bg-blue rounded hover:bg-white hover:text-blue border border-blue'>
                 <a href="#home-section">
-                    <p className='text-white text-2xl'>
+                    <p className='text-xl px-4'>
                         Go up!
                     </p>
                 </a>
             </div>
-        </div>
-        <form ref={form} onSubmit={sendEmail} action="" className='w-80 h-fit rounded flex flex-col lg:w-5/12 lg:flex-wrap lg:flex-row lg:m-5'>
-            <div className='w-full lg:w-1/2 lg:mr-auto lg:pr-1'>
-                <div className='text-white w-fit '>
-                    Name
-                </div>
-                <div className='border border-white w-full'>
-                    <input type="text" name="user_name" id="" placeholder='Your Name' className='outline-none p-1 bg-blue w-full text-white'/>
-                </div>
-            </div>
-            <div className='w-full lg:w-1/2 lg:pl-1'>
-                <div className='text-white'>
-                    Email
-                </div>
-                <div className='border border-white w-full'>
-                    <input type="text" name="user_email" id="" placeholder='Your Email' className='outline-none p-1 bg-blue w-full text-white'/>
-                </div>
-            </div>
-            <div className='w-full'>
-                <div className='text-white'>
-                    Message
-                </div>
-                <div className='border text-white w-full'>
-                    <textarea name="message" id="" cols="30" rows="10" placeholder='Your Message' className='outline-none p-1 bg-blue w-full text-white resize-none'></textarea>
-                </div>
-            </div>
-            <div className='my-3 w-full'>
-                <input type="submit" value="Send message" className='text-white border rounded p-2 w-full hover:bg-white hover:text-blue'/>
-            </div>
-        </form>
+        </motion.div>
+        <Form></Form>
     </footer>
   )
 }

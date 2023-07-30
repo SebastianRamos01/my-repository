@@ -1,21 +1,31 @@
 import React from 'react'
+import Separator from './Separator'
+import { motion } from 'framer-motion'
 
 export default function About() {
   return (
-    <>
-        <section className='bg-white' id="about-section">
-            <div className='flex flex-col items-center lg:flex-row'>
-                <div className='w-fit h-fit m-6 top-9'>
+        <section className='relative flex justify-center bg-white' id="about-section">
+            <Separator></Separator>
+            <div className='flex flex-col items-center lg:flex-row m-8 lg:m-12'>
+                <motion.div
+                    transition={{ duration: 1}}
+                    initial= {{ x: -30, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    className='w-fit h-fit top-9'>
                     <div className='w-80 h-fit'>
                         <img src="images\IMG_20230706_192946829_HDR_2-removebg-preview.png" alt="" className='h-full w-full rounded-r-3xl'/>
                     </div>
-                </div>
-                <div className= 'text-center m-3'>
-                    <div className='text-4xl text-center font-medium my-2'>
+                </motion.div>
+                <motion.div 
+                    transition={{ duration: 1}}
+                    initial= {{ x: 30, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    className= 'flex flex-col items-center'>
+                    <div className='text-4xl text-center font-bebas my-2'>
                         About Me
                     </div>
-                    <div className='bg-grey p-1 rounded-l-3xl'>
-                        <p className='text-blue text-2xl m-2'>
+                    <div className='text-blue font-bebas w-[90%]'>
+                        <p className='text-center border-blue border  text-xl p-2'>
                             I am a diligent web developer with a strong inclination towards web design, constantly sharpening my coding and design abilities.
                             Concurrently, I am wholeheartedly dedicated to expanding my knowledge of the universe through my pursuit of a physics degree.
                             My commitment to perpetually enhancing my skills and expertise is unwavering. 
@@ -51,9 +61,8 @@ export default function About() {
                         <li className='w-fit m-1'>
                         </li>
                     </ul>
-                </div>
+                </motion.div>
             </div>
         </section>
-    </>
   )
 }

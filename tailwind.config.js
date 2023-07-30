@@ -6,6 +6,11 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'bebas': ['Bebas Neue', 'sans-serif'],
+      'poppins': ['Poppins', 'sans-serif'],
+      'edu': ['Edu SA Beginner', 'cursive']
+    },
     colors: {
       'transparent': 'transparent',
       'blue': '#1f2126',
