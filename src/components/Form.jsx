@@ -24,7 +24,7 @@ export default function Form() {
         ref={form} 
         onSubmit={sendEmail} 
         action="" 
-        className='w-80 h-fit rounded flex flex-col lg:w-5/12 lg:flex-wrap lg:flex-row lg:m-5'>
+        className='w-60 h-fit rounded flex flex-col lg:w-5/12 lg:flex-wrap lg:flex-row lg:m-5'>
             <div className='w-full lg:w-1/2 lg:mr-auto lg:pr-1'>
                 <div className='text-blue w-fit font-bebas'>
                     Name

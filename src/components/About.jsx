@@ -6,14 +6,14 @@ export default function About() {
   return (
         <section className='relative flex justify-center bg-white' id="about-section">
             <Separator></Separator>
-            <div className='flex flex-col items-center lg:flex-row m-8 lg:m-12'>
+            <div className='flex flex-col items-center lg:flex-row m-5 lg:m-12'>
                 <motion.div
                     transition={{ duration: 1}}
                     initial= {{ x: -30, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     className='w-fit h-fit top-9'>
-                    <div className='w-80 h-fit'>
-                        <img src="images\IMG_20230706_192946829_HDR_2-removebg-preview.png" alt="" className='h-full w-full rounded-r-3xl'/>
+                    <div className='w-60 h-fit'>
+                        <img src="images\avatar-me.png" alt="" className='h-full w-full rounded-full'/>
                     </div>
                 </motion.div>
                 <motion.div 

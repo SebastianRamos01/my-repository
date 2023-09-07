@@ -1,7 +1,12 @@
 import { motion } from 'framer-motion'
 import React, { useState } from 'react'
 
-export default function Gallery() {
+export default function Gallery({
+    img1,
+    img2,
+    img3,
+    img4
+}) {
 
     function Img({source}) {
         return(
@@ -13,10 +18,10 @@ export default function Gallery() {
         )
     }
     const images = {
-        firstImage: 'images/Captura de pantalla 2023-07-05 224711.png',
-        secondImage: 'images/Mercado-Liebre-2.png',
-        thirdImage: 'images/Mercado-Liebre-3.png',
-        fourthImage: 'images/Mercado-Liebre-4.png',
+        firstImage: `images/${img1}.png`,
+        secondImage: `images/${img2}.png`,
+        thirdImage: `images/${img3}.png`,
+        fourthImage: `images/${img4}.png`,
     }
     const [image, setImage] = useState(images.firstImage)
     return (
