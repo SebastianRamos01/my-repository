@@ -13,7 +13,7 @@ export default function Gallery({
             <img 
                 src={source} 
                 alt="work-image"
-                className='w-full rounded-md' 
+                className='w-full rounded-md cursor-pointer' 
             />
         )
     }

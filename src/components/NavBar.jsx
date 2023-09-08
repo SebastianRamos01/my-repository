@@ -27,14 +27,14 @@ export default function NavBar() {
             <li className='lg:hover:bg-white rounded-md lg:mx-[1px]'>
                 <a href="#works-section" className=''>
                     <p className='text-xl text-blue px-4 border border-white rounded-sm hover:border-blue'>
-                        Works
+                        Trabajos
                     </p>
                 </a>
             </li>
             <li className='lg:hover:bg-white rounded-md lg:mx-[1px]'>
                 <a href="#works-section" className=''>
                     <p className='text-xl text-blue px-4 border border-white rounded-sm hover:border-blue'>
-                        Services
+                        Servicios
                     </p>
                 </a>
             </li>

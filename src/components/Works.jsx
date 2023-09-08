@@ -20,20 +20,20 @@ export default function Works() {
                     initial= {{ x: -30, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }} 
                     className='lg:w-[40%] flex flex-col items-center h-fit'>
-                    <div className='lg:w-[90%] border border-blue'>
-                        <div className='text-blue flex justify-center font-bebas'>
-                            <a href="https://proyecto-mercado-liebre-ypc4.onrender.com" className='p-1 hover:border-b border-blue'>
-                                <p className='text-3xl '>
-                                    In-Universe
-                                </p>
+                    <div className='text-blue flex justify-center font-bebas'>
+                        <a href="https://proyecto-mercado-liebre-ypc4.onrender.com" className='p-1 hover:scale-110 delay-70 transition'>
+                            <p className='text-3xl '>
+                                In-Universe
+                            </p>
+                        </a>
+                        <div className='text-2xl m-1 h-fit border border-white hover:border-blue rounded-full'>
+                            <a href="https://github.com/SebastianRamos01/Proyecto-Mercado-Liebre" className='flex p-1 h-fit'>
+                                <ion-icon name="logo-github"></ion-icon>
                             </a>
-                            <div className='text-2xl m-1 h-fit border border-white hover:border-blue rounded-full'>
-                                <a href="https://github.com/SebastianRamos01/Proyecto-Mercado-Liebre" className='flex p-1 h-fit'>
-                                    <ion-icon name="logo-github"></ion-icon>
-                                </a>
-                            </div>
                         </div>
-                        <div className='font-bebas flex items-center flex-col'>
+                    </div>
+                    <div className='lg:w-[90%] border border-blue'>
+                        <div className='font-bebas flex items-center flex-col m-1'>
                             <p className='text-xl text-blue py-2 text-center'>
                                 In-universe es una aplicacion de posteos sobre el universo, con un diseño simple con colores relacionados con el tema de la aplicacion. Desarrollado con React y Tailwind <br />
                                 La misma aun se encuentra en desarrollo, buscando dar mas interactividad a los usuarios.
@@ -62,25 +62,25 @@ export default function Works() {
                     initial= {{ x: 30, opacity: 0 }}
                     whileInView={{ x: 0, opacity:1 }}
                     className='lg:w-[40%] flex flex-col items-center h-fit'>
-                    <div className='lg:w-[90%] border border-blue'>
-                        <div className='my-1 text-blue flex justify-center font-bebas'>
-                            <a href="" className='p-1 hover:border-b border-blue'>
-                                <p className='text-3xl '>
-                                    Nailstore
-                                </p>
+                    <div className='my-1 text-blue flex justify-center font-bebas'>
+                        <a href="" className='p-1 hover:scale-110 delay-70 transition'>
+                            <p className='text-3xl '>
+                                Nailstore
+                            </p>
+                        </a>
+                        <div className='text-2xl m-1 h-fit hover:bg-blue hover:text-white rounded-full'>
+                            <a href="https://github.com/SebastianRamos01/E-commerceNailStore" className='flex p-1 h-fit'>
+                                <ion-icon name="logo-github"></ion-icon>
                             </a>
-                            <div className='text-2xl m-1 h-fit hover:bg-blue hover:text-white rounded-full'>
-                                <a href="https://github.com/SebastianRamos01/E-commerceNailStore" className='flex p-1 h-fit'>
-                                    <ion-icon name="logo-github"></ion-icon>
-                                </a>
-                            </div>
                         </div>
-                        <div className='font-bebas flex items-center flex-col my-1'>
+                    </div>
+                    <div className='lg:w-[90%] border border-blue'>
+                        <div className='font-bebas flex items-center flex-col m-1'>
                             <p className='text-xl text-blue py-2 text-center'>
-                                An Ecommerce of manicure products.
-                                Development of a web application that is an electronic commerce using HTML, CSS and JavaScript taking practices to make responsive sites for the Frontend.
-                                The Backend side was developed in JavaScript with Express, Node.js following MVC practices.
-                                Database design in MySql, assembly and organization with Sequelize.
+                                Un e-commerce de productos de manicura. <br />
+                                El front-end de la aplicacion fue desarrollado con HTML, CSS and JavaScript usando practicas de sitios responsive para todos los dipositivos.
+                                El back-end fue desarrollado en JavaScript con Express y Node.js, siguiendo practicas MVC.
+                                La base de datos fue diseñada con MySql, ensamblada y organizada usando Sequelize.
                             </p>
                             <ul className='flex flex-wrap justify-evenly'>
                                 <li className='m-1'>
@@ -130,23 +130,23 @@ export default function Works() {
                     initial= {{ x: -30, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }} 
                     className='lg:w-[40%] flex flex-col items-center h-fit'>
-                    <div className='lg:w-[90%] border border-blue'>
-                        <div className='text-blue flex justify-center font-bebas'>
-                            <a href="https://proyecto-mercado-liebre-ypc4.onrender.com" className='p-1 hover:border-b border-blue'>
-                                <p className='text-3xl '>
-                                    Mercado Liebre
-                                </p>
+                    <div className='text-blue flex justify-center font-bebas'>
+                        <a href="https://proyecto-mercado-liebre-ypc4.onrender.com" className='p-1 hover:scale-110 delay-70 transition'>
+                            <p className='text-3xl '>
+                                Mercado Liebre
+                            </p>
+                        </a>
+                        <div className='text-2xl m-1 h-fit hover:bg-blue hover:text-white rounded-full'>
+                            <a href="https://github.com/SebastianRamos01/Proyecto-Mercado-Liebre" className='flex p-1 h-fit'>
+                                <ion-icon name="logo-github"></ion-icon>
                             </a>
-                            <div className='text-2xl m-1 h-fit hover:bg-blue hover:text-white rounded-full'>
-                                <a href="https://github.com/SebastianRamos01/Proyecto-Mercado-Liebre" className='flex p-1 h-fit'>
-                                    <ion-icon name="logo-github"></ion-icon>
-                                </a>
-                            </div>
                         </div>
-                        <div className='font-bebas flex items-center flex-col'>
+                    </div>
+                    <div className='lg:w-[90%] border border-blue'>
+                        <div className='font-bebas flex items-center flex-col m-1'>
                             <p className='text-xl text-blue py-2 text-center'>
-                                Front-End clone of Mercado Libre.
-                                Built with HTML5, CSS and using JavaScript for functionalitys.
+                                Un clon front-end de mercado libre.
+                                Desarrollado con HTML5, CSS y usando JavaScript para funcionalidades.
                             </p>
                             <ul className='flex justify-evenly'>
                                 <li className='m-1'>
