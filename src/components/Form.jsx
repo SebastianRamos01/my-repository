@@ -30,7 +30,7 @@ export default function Form() {
                     Nombre
                 </div>
                 <div className='border border-blue w-full'>
-                    <input type="text" name="user_name" id="" placeholder='Mi Nombre' className='outline-none p-1 bg-white w-full text-blue'/>
+                    <input type="text" name="user_name" id="" placeholder='Un Nombre' className='outline-none p-1 bg-white w-full text-blue'/>
                 </div>
             </div>
             <div className='w-full lg:w-1/2 lg:pl-1'>
@@ -38,7 +38,7 @@ export default function Form() {
                     Email
                 </div>
                 <div className='border border-blue w-full'>
-                    <input type="text" name="user_email" id="" placeholder='Mi Email' required className='outline-none p-1 bg-white w-full text-blue'/>
+                    <input type="text" name="user_email" id="" placeholder='Un Email' required className='outline-none p-1 bg-white w-full text-blue'/>
                 </div>
             </div>
             <div className='w-full'>
@@ -50,7 +50,7 @@ export default function Form() {
                 </div>
             </div>
             <div className='my-3 w-full font-bebas'>
-                <input type="submit" value="Send message" className='text-blue border rounded p-2 w-full hover:bg-blue hover:text-white'/>
+                <input type="submit" value="Mandar Mensaje" className='text-blue border rounded p-2 w-full hover:bg-blue hover:text-white'/>
             </div>
         </motion.form>
   )

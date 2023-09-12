@@ -26,13 +26,13 @@ export default function About() {
                     </div>
                     <div className='text-blue font-bebas w-[90%]'>
                         <p className='text-center border-blue border  text-xl p-2'>
-                            I am a diligent web developer with a strong inclination towards web design, constantly sharpening my coding and design abilities.
-                            Concurrently, I am wholeheartedly dedicated to expanding my knowledge of the universe through my pursuit of a physics degree.
-                            My commitment to perpetually enhancing my skills and expertise is unwavering. 
-                            I welcome the opportunity to collaborate and devise cutting-edge solutions together.
+                            Soy un Desarrollador Web Full-Stack con una fuerte inclinacion hacia el diseño web, constantemente mejorando mis habilidades de desarrollo y diseño.
+                            Actualmente, Trabajo como freelancer dedicado a ayudar a mis clientes a lograr sus objetivos dentro del desarrollo web.
+                            Comprometido, a ofrecer la mejor calidad del producto. 
+                            Estoy abierto a la oportunidad de colaborar e idear innovadoras soluciones.
                         </p>
                     </div>
-                    <ul className='flex flex-wrap justify-center m-2'>
+                    <ul className='flex flex-wrap justify-center items-center m-2'>
                         <li className= 'w-fit m-1'>
                             <div className='text-yellow text-4xl'>
                                 <ion-icon name="logo-javascript"></ion-icon>
@@ -58,7 +58,10 @@ export default function About() {
                                 <ion-icon name="logo-react"></ion-icon>
                             </div>
                         </li>
-                        <li className='w-fit m-1'>
+                        <li className='w-fit m-1 font-bebas'>
+                            <div className='text-lg'>
+                                MySql
+                            </div>
                         </li>
                     </ul>
                 </motion.div>

@@ -13,7 +13,7 @@ export default function Main() {
                 initial={{ x: -30, opacity: 0}}
                 animate={{ x: 0, opacity: 1}}>
                 <p className='text-xl opacity-50'>
-                    Hello, this is my portfolio
+                    Sebastian Ramos
                 </p>
             </motion.div>
             <motion.div
@@ -21,8 +21,8 @@ export default function Main() {
                 transition={{ duration: 1.1}}
                 initial= {{ x: -30, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}>
-                <p className='text-4xl text-blue '>
-                    My name is Sebastián
+                <p className='text-5xl text-blue '>
+                    Desarrollando buenas ideas.
                 </p>
             </motion.div>
             <motion.div
@@ -30,8 +30,8 @@ export default function Main() {
                 transition={{ duration: 1}}
                 initial= {{ x: -30, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}>
-                <p className='text-blue text-5xl w-[250px] sm:w-[500px] md:w-auto'>
-                    I'm a Full Stack Web Developer.
+                <p className='text-blue text-2xl w-[250px] sm:w-[500px] md:w-auto'>
+                    Desarrollador | Diseñador | Artista 
                 </p>
             </motion.div>
         </div>
@@ -42,7 +42,7 @@ export default function Main() {
             className='mx-8 lg:mx-12 w-fit text-white bg-blue rounded hover:bg-white hover:text-blue border border-blue'>
             <a href="#contact-section" className='w-fit'>
                 <p className='text-xl w-fit px-3 lg:px-5'>                        
-                    Contact
+                    Contacto
                 </p>
             </a>
         </motion.div>

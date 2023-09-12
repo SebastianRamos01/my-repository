@@ -3,6 +3,7 @@ import Separator from './Separator'
 import { motion } from 'framer-motion'
 import Gallery from './Gallery'
 import react from '../assets/react.svg'
+import Link from './Link'
 
 export default function Works() {
     return (
@@ -19,18 +20,11 @@ export default function Works() {
                     transition={{ duration: 1}}
                     initial= {{ x: -30, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }} 
-                    className='lg:w-[40%] flex flex-col items-center h-fit'>
-                    <div className='text-blue flex justify-center font-bebas'>
-                        <a href="https://proyecto-mercado-liebre-ypc4.onrender.com" className='p-1 hover:scale-110 delay-70 transition'>
-                            <p className='text-3xl '>
-                                In-Universe
-                            </p>
-                        </a>
-                        <div className='text-2xl m-1 h-fit border border-white hover:border-blue rounded-full'>
-                            <a href="https://github.com/SebastianRamos01/Proyecto-Mercado-Liebre" className='flex p-1 h-fit'>
-                                <ion-icon name="logo-github"></ion-icon>
-                            </a>
-                        </div>
+                    className='lg:w-[40%] flex flex-col items-center h-fit font-bebas'>
+                    <div className='text-blue flex justify-center'>
+                        <p className='text-3xl'>
+                            In-Universe
+                        </p>
                     </div>
                     <div className='lg:w-[90%] border border-blue'>
                         <div className='font-bebas flex items-center flex-col m-1'>
@@ -38,16 +32,27 @@ export default function Works() {
                                 In-universe es una aplicacion de posteos sobre el universo, con un diseño simple con colores relacionados con el tema de la aplicacion. Desarrollado con React y Tailwind <br />
                                 La misma aun se encuentra en desarrollo, buscando dar mas interactividad a los usuarios.
                             </p>
-                            <ul className='flex justify-evenly'>
-                                <li className='m-1'>
-                                    <img src={react} alt="" className='w-8'/>
-                                </li>
-                                <li className='m-1 text-xl'>
-                                    <p>Tailwind.css</p>
-                                </li>
-                            </ul>
+                            <div className='flex w-[70%] justify-evenly'>
+                                <Link 
+                                    prop='ver proyecto.'
+                                    link=""
+                                ></Link>
+                                |
+                                <Link 
+                                    prop='ver codigo.'
+                                    link="https://github.com/SebastianRamos01/post-app"
+                                ></Link>
+                            </div>
                         </div>
                     </div>
+                    <ul className='flex justify-evenly p-1'>
+                        <li className='m-1'>
+                            <img src={react} alt="" className='w-8'/>
+                        </li>
+                        <li className='m-1 text-xl'>
+                            <p>Tailwind.css</p>
+                        </li>
+                    </ul>
                 </motion.div>
             </div>
             <div className='flex flex-col-reverse items-center lg:flex-row m-8 lg:m-12'>
@@ -61,18 +66,11 @@ export default function Works() {
                     transition={{ duration: 1 }}
                     initial= {{ x: 30, opacity: 0 }}
                     whileInView={{ x: 0, opacity:1 }}
-                    className='lg:w-[40%] flex flex-col items-center h-fit'>
-                    <div className='my-1 text-blue flex justify-center font-bebas'>
-                        <a href="" className='p-1 hover:scale-110 delay-70 transition'>
-                            <p className='text-3xl '>
-                                Nailstore
-                            </p>
-                        </a>
-                        <div className='text-2xl m-1 h-fit hover:bg-blue hover:text-white rounded-full'>
-                            <a href="https://github.com/SebastianRamos01/E-commerceNailStore" className='flex p-1 h-fit'>
-                                <ion-icon name="logo-github"></ion-icon>
-                            </a>
-                        </div>
+                    className='lg:w-[40%] flex flex-col items-center h-fit font-bebas'>
+                    <div className='my-1 text-blue flex justify-center'>
+                        <p className='text-3xl '>
+                            Nailstore
+                        </p>
                     </div>
                     <div className='lg:w-[90%] border border-blue'>
                         <div className='font-bebas flex items-center flex-col m-1'>
@@ -82,40 +80,51 @@ export default function Works() {
                                 El back-end fue desarrollado en JavaScript con Express y Node.js, siguiendo practicas MVC.
                                 La base de datos fue diseñada con MySql, ensamblada y organizada usando Sequelize.
                             </p>
-                            <ul className='flex flex-wrap justify-evenly'>
-                                <li className='m-1'>
-                                    <div className='text-orange text-3xl '>
-                                        <ion-icon name="logo-html5"></ion-icon>
-                                    </div>
-                                </li>
-                                <li className='m-1'>
-                                    <div className='text-light-blue text-3xl'>
-                                        <ion-icon name="logo-css3"></ion-icon>
-                                    </div>
-                                </li>
-                                <li className='m-1'>
-                                    <div className='text-yellow text-3xl'>
-                                        <ion-icon name="logo-javascript"></ion-icon>
-                                    </div>
-                                </li>
-                                <li className='w-fit m-1'>
-                                    <div className='text-green text-4xl'>
-                                        <ion-icon name="logo-nodejs"></ion-icon>
-                                    </div>
-                                </li>
-                                <li className='w-fit m-1'>
-                                    <p className='text-blue p-1 font-semibold'>
-                                        MySql
-                                    </p>
-                                </li>
-                                <li className='w-fit m-1'>
-                                    <p className='text-blue p-1 font-semibold'>
-                                        Sequelize
-                                    </p>
-                                </li>
-                            </ul>
+                            <div className='flex w-[70%] justify-evenly'>
+                                <Link 
+                                    prop='ver demo.'
+                                    link=""
+                                ></Link>
+                                |
+                                <Link 
+                                    prop='ver codigo.'
+                                    link="https://github.com/SebastianRamos01/E-commerceNailStore"
+                                ></Link>
+                            </div>
                         </div>
                     </div>
+                    <ul className='flex flex-wrap justify-evenly p-1'>
+                        <li className='m-1'>
+                            <div className='text-orange text-3xl '>
+                                <ion-icon name="logo-html5"></ion-icon>
+                            </div>
+                        </li>
+                        <li className='m-1'>
+                            <div className='text-light-blue text-3xl'>
+                                <ion-icon name="logo-css3"></ion-icon>
+                            </div>
+                        </li>
+                        <li className='m-1'>
+                            <div className='text-yellow text-3xl'>
+                                <ion-icon name="logo-javascript"></ion-icon>
+                            </div>
+                        </li>
+                        <li className='w-fit m-1'>
+                            <div className='text-green text-4xl'>
+                                <ion-icon name="logo-nodejs"></ion-icon>
+                            </div>
+                        </li>
+                        <li className='w-fit m-1'>
+                            <p className='text-blue p-1 font-semibold'>
+                                MySql
+                            </p>
+                        </li>
+                        <li className='w-fit m-1'>
+                            <p className='text-blue p-1 font-semibold'>
+                                Sequelize
+                            </p>
+                        </li>
+                    </ul>
                 </motion.div>
             </div>
             <div className='flex flex-col-reverse items-center lg:flex-row-reverse m-8 lg:mx-12'>
@@ -129,18 +138,11 @@ export default function Works() {
                     transition={{ duration: 1}}
                     initial= {{ x: -30, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }} 
-                    className='lg:w-[40%] flex flex-col items-center h-fit'>
-                    <div className='text-blue flex justify-center font-bebas'>
-                        <a href="https://proyecto-mercado-liebre-ypc4.onrender.com" className='p-1 hover:scale-110 delay-70 transition'>
-                            <p className='text-3xl '>
-                                Mercado Liebre
-                            </p>
-                        </a>
-                        <div className='text-2xl m-1 h-fit hover:bg-blue hover:text-white rounded-full'>
-                            <a href="https://github.com/SebastianRamos01/Proyecto-Mercado-Liebre" className='flex p-1 h-fit'>
-                                <ion-icon name="logo-github"></ion-icon>
-                            </a>
-                        </div>
+                    className='lg:w-[40%] flex flex-col items-center h-fit font-bebas'>
+                    <div className='text-blue flex justify-center'>
+                        <p className='text-3xl'>
+                            Mercado Liebre
+                        </p>
                     </div>
                     <div className='lg:w-[90%] border border-blue'>
                         <div className='font-bebas flex items-center flex-col m-1'>
@@ -148,25 +150,36 @@ export default function Works() {
                                 Un clon front-end de mercado libre.
                                 Desarrollado con HTML5, CSS y usando JavaScript para funcionalidades.
                             </p>
-                            <ul className='flex justify-evenly'>
-                                <li className='m-1'>
-                                    <div className='text-orange text-3xl '>
-                                        <ion-icon name="logo-html5"></ion-icon>
-                                    </div>
-                                </li>
-                                <li className='m-1'>
-                                    <div className='text-light-blue text-3xl'>
-                                        <ion-icon name="logo-css3"></ion-icon>
-                                    </div>
-                                </li>
-                                <li className='m-1'>
-                                    <div className='text-yellow text-3xl'>
-                                        <ion-icon name="logo-javascript"></ion-icon>
-                                    </div>
-                                </li>
-                            </ul>
+                            <div className='flex w-[70%] justify-evenly'>
+                                <Link 
+                                    prop='ver proyecto.'
+                                    link="https://proyecto-mercado-liebre-ypc4.onrender.com"
+                                ></Link>
+                                |
+                                <Link 
+                                    prop='ver codigo.'
+                                    link="https://github.com/SebastianRamos01/Proyecto-Mercado-Liebre"
+                                ></Link>
+                            </div>
                         </div>
                     </div>
+                    <ul className='flex justify-evenly p-1'>
+                        <li className='m-1'>
+                            <div className='text-orange text-3xl '>
+                                <ion-icon name="logo-html5"></ion-icon>
+                            </div>
+                        </li>
+                        <li className='m-1'>
+                            <div className='text-light-blue text-3xl'>
+                                <ion-icon name="logo-css3"></ion-icon>
+                            </div>
+                        </li>
+                        <li className='m-1'>
+                            <div className='text-yellow text-3xl'>
+                                <ion-icon name="logo-javascript"></ion-icon>
+                            </div>
+                        </li>
+                    </ul>
                 </motion.div>
             </div>
         </section>

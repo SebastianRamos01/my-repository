@@ -11,7 +11,7 @@ export default function Arrow() {
         animate={{ y: 0 }} 
         className='absolute right-5 bottom-5 text-blue'>
         <p>
-            See more
+            Ver Mas
         </p>
         <div className='text-center'>
             <ion-icon name="chevron-down-outline"></ion-icon>
