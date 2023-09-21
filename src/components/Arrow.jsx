@@ -9,7 +9,7 @@ export default function Arrow() {
                 repeat:Infinity }}
         initial={{ y:-2 }}
         animate={{ y: 0 }} 
-        className='absolute right-5 bottom-5 text-blue'>
+        className='absolute right-5 bottom-5 text-blue font-bebas'>
         <p>
             Ver Mas
         </p>

@@ -8,8 +8,7 @@ export default {
     extend: {},
     fontFamily: {
       'bebas': ['Bebas Neue', 'sans-serif'],
-      'poppins': ['Poppins', 'sans-serif'],
-      'edu': ['Edu SA Beginner', 'cursive']
+      'major': ['Major Mono Display', 'monospace']
     },
     colors: {
       'transparent': 'transparent',
