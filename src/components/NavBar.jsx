@@ -16,16 +16,23 @@ export default function NavBar() {
                     }}>
                 <ion-icon name="reorder-three-outline"></ion-icon>
             </div>
-        <ul className={closeMenu === true ? 'hidden lg:flex lg:items-center lg:flex-row lg:h-[52px]' : 'lg:items-center border border-blue md:border-none mx-2 rounded-l-md lg:flex lg:flex-row lg:h-[52px]'}>
+        <ul className={closeMenu === true ? 'hidden lg:flex lg:items-center lg:flex-row lg:h-[52px]' : 'lg:items-center text-center w-screen absolute right-0 h-screen bg-white lg:flex lg:flex-row lg:h-[52px]'}>
             <li className='lg:hover:bg-white rounded-md lg:mx-[1px]'>
-                <a href="#about-section" className=''>
+                <a href="#home-section" className='' onClick={() => {setCloseMenu(true)}}>
+                    <p className='text-xl text-blue px-4 border border-white rounded-sm hover:border-blue'>
+                        Home
+                    </p>
+                </a>
+            </li>
+            <li className='lg:hover:bg-white rounded-md lg:mx-[1px]'>
+                <a href="#about-section" className='' onClick={() => {setCloseMenu(true)}}>
                     <p className='text-xl text-blue px-4 border border-white rounded-sm hover:border-blue'>
                         About
                     </p>
                 </a>
             </li>
             <li className='lg:hover:bg-white rounded-md lg:mx-[1px]'>
-                <a href="#works-section" className=''>
+                <a href="#works-section" className='' onClick={() => {setCloseMenu(true)}}>
                     <p className='text-xl text-blue px-4 border border-white rounded-sm hover:border-blue'>
                         Trabajos
                     </p>
@@ -33,6 +40,6 @@ export default function NavBar() {
             </li>
             <Social></Social>
         </ul>
-        </nav>
+    </nav>
   )
 }
