@@ -35,7 +35,7 @@ export default function Works() {
                             <div className='flex w-[70%] justify-evenly'>
                                 <Link 
                                     prop='ver proyecto.'
-                                    link=""
+                                    link="https://inuniverse.com.ar"
                                 ></Link>
                                 |
                                 <Link 
