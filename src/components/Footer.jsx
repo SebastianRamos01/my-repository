@@ -11,16 +11,16 @@ export default function Footer() {
              transition={{ duration: 1.5}}
              initial={{ x: -60, opacity:0 }}
              whileInView={{ x: 0, opacity:1 }}
-            className='flex flex-col items-center m-3 font-major'>
-            <div className='text-blue text-xl opacity-50'>
+            className='flex flex-col items-center m-3 font-major text-center'>
+            <div className='text-blue text-lg opacity-80 p-1'>
                 Si tienes una pregunta
             </div>
-            <div className='text-blue text-3xl'>
+            <div className='text-blue text-[26px] md:text-[32px]'>
                 Enviame un mensaje!
             </div>
             <div className='text-blue border-b hover:border-r border-blue'>
                 <a href="#home-section">
-                    <p className='text-lg px-4 font-bold'>
+                    <p className='text-[16px] px-4 hover:font-bold'>
                         Volver!
                     </p>
                 </a>

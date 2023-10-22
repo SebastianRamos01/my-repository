@@ -12,7 +12,7 @@ export default function Main() {
                 transition={{ duration: 1.5}}
                 initial={{ x: -30, opacity: 0}}
                 animate={{ x: 0, opacity: 1}}>
-                <p className='text-[15px] md:text-[20px] opacity-50'>
+                <p className='text-[15px] md:text-[18px] opacity-90'>
                     Sebastian Ramos
                 </p>
             </motion.div>
@@ -21,7 +21,7 @@ export default function Main() {
                 transition={{ duration: 1.1}}
                 initial= {{ x: -30, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}>
-                <p className='text-[28px] md:text-[33px]'>
+                <p className='text-[26px] md:text-[32px]'>
                     Desarrollando buenas ideas.
                 </p>
             </motion.div>
@@ -30,7 +30,7 @@ export default function Main() {
                 transition={{ duration: 1}}
                 initial= {{ x: -30, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}>
-                <p className='text-[14px] md:text-[19px] text-ellipsis'>
+                <p className='text-[14px] md:text-[18px] text-ellipsis'>
                     Desarrollador | Diseñador | Artista 
                 </p>
             </motion.div>
@@ -41,7 +41,7 @@ export default function Main() {
             animate={{ x: 0, opacity: 1 }}
             className='mx-8 my-1 lg:mx-12 w-fit border-b text-left hover:border-r'>
             <a href="#contact-section" className='w-fit '>
-                <p className='text-[16px] w-fit pr-3 lg:pr-5 font-bold'>                        
+                <p className='text-[16px] w-fit pr-3 lg:pr-5 hover:font-bold'>                        
                     Contacto
                 </p>
             </a>
