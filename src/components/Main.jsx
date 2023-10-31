@@ -6,9 +6,9 @@ export default function Main() {
   return (
     <main id='home-section' 
         className='h-screen flex flex-col justify-center bg-white font-major'>
-        <div className='mx-7 lg:mx-12 text-blue'>
+        <div className='mx-7 lg:mx-12 text-blue bg-white w-fit'>
             <motion.div 
-                className='text-blue' 
+                className='text-blue w-fit' 
                 transition={{ duration: 1.5}}
                 initial={{ x: -30, opacity: 0}}
                 animate={{ x: 0, opacity: 1}}>
@@ -39,7 +39,7 @@ export default function Main() {
             transition={{ duration: 1.1}}
             initial= {{ x: -30, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            className='mx-8 my-1 lg:mx-12 w-fit border-b text-left hover:border-r'>
+            className='mx-8 my-1 lg:mx-12 w-fit border-b text-left hover:border-r bg-white'>
             <a href="#contact-section" className='w-fit '>
                 <p className='text-[16px] w-fit pr-3 lg:pr-5 hover:font-bold'>                        
                     Contacto
