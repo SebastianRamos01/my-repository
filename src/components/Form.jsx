@@ -24,9 +24,9 @@ export default function Form() {
         ref={form} 
         onSubmit={sendEmail} 
         action="" 
-        className='w-60 h-fit rounded flex flex-col lg:w-5/12 lg:flex-wrap lg:flex-row lg:m-5'>
-            <div className='w-full lg:w-1/2 lg:mr-auto lg:pr-1 font-play'>
-                <div className='text-blue w-fit font-semibold'>
+        className='w-[75%] h-fit rounded flex flex-col lg:w-5/12 lg:flex-wrap lg:flex-row lg:m-5'>
+            <div className='w-full lg:w-1/2 lg:mr-auto lg:pr-1'>
+                <div className='text-blue w-fit font-semibold font-play'>
                     Nombre
                 </div>
                 <div className='border border-blue w-full'>
@@ -34,7 +34,7 @@ export default function Form() {
                 </div>
             </div>
             <div className='w-full lg:w-1/2 lg:pl-1'>
-                <div className='text-blue font-semibold'>
+                <div className='text-blue font-semibold font-play'>
                     Email
                 </div>
                 <div className='border border-blue w-full'>
@@ -42,14 +42,14 @@ export default function Form() {
                 </div>
             </div>
             <div className='w-full'>
-                <div className='text-blue font-semibold'>
+                <div className='text-blue font-semibold font-play'>
                     Mensaje
                 </div>
                 <div className='border text-blue w-full'>
                     <textarea name="message" id="" cols="30" rows="10" placeholder='Tu mensaje.' className='outline-none p-1 bg-white w-full text-blue resize-none'></textarea>
                 </div>
             </div>
-            <div className='my-3 w-full'>
+            <div className='my-3 w-full font-play'>
                 <input type="submit" value="Mandar Mensaje" className='text-blue border rounded p-2 w-full hover:bg-blue hover:text-white'/>
             </div>
         </motion.form>

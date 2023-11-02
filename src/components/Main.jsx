@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import Arrow from './Arrow'
 
 export default function Main() {
   return (
@@ -12,7 +11,7 @@ export default function Main() {
                 transition={{ duration: 1.5}}
                 initial={{ x: -30, opacity: 0}}
                 animate={{ x: 0, opacity: 1}}>
-                <p className='text-[13px] md:text-[18px] opacity-90'>
+                <p className='text-[15px] md:text-[18px] opacity-90'>
                     Sebastian Ramos
                 </p>
             </motion.div>
@@ -21,7 +20,7 @@ export default function Main() {
                 transition={{ duration: 1.1}}
                 initial= {{ x: -30, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}>
-                <p className='text-[26px] md:text-[35px]'>
+                <p className='text-[30px] md:text-[35px]'>
                     Web Developer Portfolio.
                 </p>
             </motion.div>
@@ -30,7 +29,7 @@ export default function Main() {
                 transition={{ duration: 1}}
                 initial= {{ x: -30, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}>
-                <p className='text-[13px] md:text-[18px] text-ellipsis'>
+                <p className='text-[15px] md:text-[18px] text-ellipsis'>
                     Desarrollo y Diseño de Productos Digitales.
                 </p>
             </motion.div>

@@ -32,7 +32,7 @@ export default function Works() {
                                 In-universe es una aplicacion de posteos sobre el universo, con un diseño simple con colores relacionados con el tema de la aplicacion. Desarrollado con React y Tailwind <br />
                                 La misma aun se encuentra en desarrollo, buscando dar mas interactividad a los usuarios.
                             </p>
-                            <div className='flex w-[70%] justify-evenly'>
+                            <div className='flex w-[85%] md:w-[70%] justify-evenly'>
                                 <Link 
                                     prop='Ver proyecto.'
                                     link="https://inuniverse.com.ar"
@@ -80,7 +80,7 @@ export default function Works() {
                                 El back-end fue desarrollado en JavaScript con Express y Node.js, siguiendo practicas MVC.
                                 La base de datos fue diseñada con MySql, ensamblada y organizada usando Sequelize.
                             </p>
-                            <div className='flex w-[70%] justify-evenly'>
+                            <div className='flex w-[85%] md:w-[70%] justify-evenly'>
                                 <Link 
                                     prop='Ver demo.'
                                     link=""
@@ -150,7 +150,7 @@ export default function Works() {
                                 Un clon front-end de mercado libre.
                                 Desarrollado con HTML5, CSS y usando JavaScript para funcionalidades.
                             </p>
-                            <div className='flex w-[70%] justify-evenly'>
+                            <div className='flex w-[85%] md:w-[70%] justify-evenly'>
                                 <Link 
                                     prop='Ver proyecto.'
                                     link="https://proyecto-mercado-liebre-ypc4.onrender.com"
