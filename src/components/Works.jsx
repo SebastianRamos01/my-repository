@@ -7,7 +7,7 @@ import Link from './Link'
 
 export default function Works() {
     return (
-        <section className='relative flex flex-col items-center bg-white' id='works-section'>
+        <section className='relative flex flex-col items-center' id='works-section'>
             <Separator></Separator>
             <div className='flex flex-col-reverse items-center lg:flex-row-reverse m-8 lg:mx-12'>
                 <Gallery 
@@ -20,26 +20,26 @@ export default function Works() {
                     transition={{ duration: 1}}
                     initial= {{ x: -30, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }} 
-                    className='lg:w-[40%] flex flex-col items-center h-fit font-bebas'>
-                    <div className='text-blue flex justify-center'>
+                    className='lg:w-[40%] flex flex-col items-center h-fit font-play '>
+                    <div className='text-blue flex justify-center font-bold'>
                         <p className='text-3xl'>
                             In-Universe
                         </p>
                     </div>
                     <div className='lg:w-[90%] border border-blue'>
-                        <div className='font-bebas flex items-center flex-col m-1'>
-                            <p className='text-xl text-blue py-2 text-center'>
+                        <div className='font-play flex items-center flex-col m-1'>
+                            <p className='text-lg text-blue py-2 text-center'>
                                 In-universe es una aplicacion de posteos sobre el universo, con un diseño simple con colores relacionados con el tema de la aplicacion. Desarrollado con React y Tailwind <br />
                                 La misma aun se encuentra en desarrollo, buscando dar mas interactividad a los usuarios.
                             </p>
                             <div className='flex w-[70%] justify-evenly'>
                                 <Link 
-                                    prop='ver proyecto.'
+                                    prop='Ver proyecto.'
                                     link="https://inuniverse.com.ar"
                                 ></Link>
                                 |
                                 <Link 
-                                    prop='ver codigo.'
+                                    prop='Ver codigo.'
                                     link="https://github.com/SebastianRamos01/post-app"
                                 ></Link>
                             </div>
@@ -66,15 +66,15 @@ export default function Works() {
                     transition={{ duration: 1 }}
                     initial= {{ x: 30, opacity: 0 }}
                     whileInView={{ x: 0, opacity:1 }}
-                    className='lg:w-[40%] flex flex-col items-center h-fit font-bebas'>
-                    <div className='my-1 text-blue flex justify-center'>
+                    className='lg:w-[40%] flex flex-col items-center h-fit font-play'>
+                    <div className='my-1 text-blue flex justify-center font-bold'>
                         <p className='text-3xl '>
                             Nailstore
                         </p>
                     </div>
                     <div className='lg:w-[90%] border border-blue'>
-                        <div className='font-bebas flex items-center flex-col m-1'>
-                            <p className='text-xl text-blue py-2 text-center'>
+                        <div className='font-play flex items-center flex-col m-1'>
+                            <p className='text-lg text-blue py-2 text-center'>
                                 Un e-commerce de productos de manicura. <br />
                                 El front-end de la aplicacion fue desarrollado con HTML, CSS and JavaScript usando practicas de sitios responsive para todos los dipositivos.
                                 El back-end fue desarrollado en JavaScript con Express y Node.js, siguiendo practicas MVC.
@@ -82,12 +82,12 @@ export default function Works() {
                             </p>
                             <div className='flex w-[70%] justify-evenly'>
                                 <Link 
-                                    prop='ver demo.'
+                                    prop='Ver demo.'
                                     link=""
                                 ></Link>
                                 |
                                 <Link 
-                                    prop='ver codigo.'
+                                    prop='Ver codigo.'
                                     link="https://github.com/SebastianRamos01/E-commerceNailStore"
                                 ></Link>
                             </div>
@@ -138,26 +138,26 @@ export default function Works() {
                     transition={{ duration: 1}}
                     initial= {{ x: -30, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }} 
-                    className='lg:w-[40%] flex flex-col items-center h-fit font-bebas'>
-                    <div className='text-blue flex justify-center'>
+                    className='lg:w-[40%] flex flex-col items-center h-fit font-play'>
+                    <div className='text-blue flex justify-center font-bold'>
                         <p className='text-3xl'>
                             Mercado Liebre
                         </p>
                     </div>
                     <div className='lg:w-[90%] border border-blue'>
-                        <div className='font-bebas flex items-center flex-col m-1'>
-                            <p className='text-xl text-blue py-2 text-center'>
+                        <div className='font-play flex items-center flex-col m-1'>
+                            <p className='text-lg text-blue py-2 text-center'>
                                 Un clon front-end de mercado libre.
                                 Desarrollado con HTML5, CSS y usando JavaScript para funcionalidades.
                             </p>
                             <div className='flex w-[70%] justify-evenly'>
                                 <Link 
-                                    prop='ver proyecto.'
+                                    prop='Ver proyecto.'
                                     link="https://proyecto-mercado-liebre-ypc4.onrender.com"
                                 ></Link>
                                 |
                                 <Link 
-                                    prop='ver codigo.'
+                                    prop='Ver codigo.'
                                     link="https://github.com/SebastianRamos01/Proyecto-Mercado-Liebre"
                                 ></Link>
                             </div>

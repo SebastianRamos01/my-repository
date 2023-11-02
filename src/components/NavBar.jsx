@@ -9,7 +9,7 @@ export default function NavBar() {
     }
 
   return (
-    <nav className='w-[40%] absolute right-0 lg:w-fit lg:mx-1 font-major'>
+    <nav className='w-[40%] absolute right-0 lg:w-fit lg:mx-1 font-play'>
          <div className='text-3xl h-fit text-end p-1 m-1 text-blue lg:hidden' 
             onClick={() => {
                     handleCloseMenu()

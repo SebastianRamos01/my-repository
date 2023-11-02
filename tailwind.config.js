@@ -8,6 +8,7 @@ export default {
     extend: {},
     fontFamily: {
       'bebas': ['Bebas Neue', 'sans-serif'],
+      'play': ['Playfair Display', 'sans-serif'],
       'major': ['Major Mono Display', 'monospace']
     },
     colors: {
