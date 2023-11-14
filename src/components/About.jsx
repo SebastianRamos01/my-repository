@@ -6,7 +6,7 @@ export default function About() {
   return (
         <section className='relative flex justify-center' id="about-section">
             <Separator></Separator>
-            <div className='flex flex-col items-center lg:flex-row m-5 lg:m-12'>
+            <div className='flex flex-col items-center lg:flex-row m-4'>
                 <motion.div
                     transition={{ duration: 1}}
                     initial= {{ x: -30, opacity: 0 }}
@@ -24,8 +24,8 @@ export default function About() {
                     <div className='text-4xl text-center font-play font-bold border-b my-2'>
                         About Me
                     </div>
-                    <div className='text-blue font-play w-[90%]'>
-                        <p className='text-center border-blue border  text-lg p-2'>
+                    <div className='text-blue font-play md:ml-4'>
+                        <p className='text-center border-blue border text-lg p-2'>
                             Soy un Desarrollador Web Full-Stack con una fuerte inclinacion hacia el diseño web, constantemente mejorando mis habilidades de desarrollo y diseño.
                             Actualmente, Trabajo como freelancer dedicado a ayudar a mis clientes a lograr sus objetivos dentro del desarrollo web.
                             Comprometido, a ofrecer la mejor calidad del producto. 

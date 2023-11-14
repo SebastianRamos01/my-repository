@@ -1,4 +1,5 @@
 import About from "./components/About"
+import Body from "./components/Body"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Main from "./components/Main"
@@ -9,11 +10,7 @@ function App() {
   return (
     <>
         <Header></Header>
-        <Main></Main>
-        <About></About>
-        <Works></Works>
-        <Footer></Footer>
-        <Sign></Sign>
+        <Body></Body>
     </>
   )
 }

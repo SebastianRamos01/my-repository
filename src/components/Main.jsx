@@ -4,8 +4,8 @@ import { motion } from 'framer-motion'
 export default function Main() {
   return (
     <main id='home-section' 
-        className='h-[90vh] flex flex-col justify-center bg-white font-play'>
-        <div className='mx-5 md:mx-auto md:text-center text-blue bg-white w-fit'>
+        className='h-[90vh] flex flex-col justify-center font-play'>
+        <div className='mx-5 md:mx-auto md:text-center text-blue w-fit'>
             <motion.div 
                 className='text-blue' 
                 transition={{ duration: 1.5}}

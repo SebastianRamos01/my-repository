@@ -30,7 +30,7 @@ export default function Gallery({
             initial={{ x: 30, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             className='md:w-[80%] lg:w-[60%] flex flex-col items-center'>
-            <div className='mt-3 md:w-11/12 lg:w-[100%]'>
+            <div className='mt-8 md:w-11/12 lg:w-[100%]'>
                 <img src={image} alt="work-image" className='w-full rounded-md' />
             </div>
             <ul className='flex w-full justify-center'>
