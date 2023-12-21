@@ -1,12 +1,10 @@
 import React from 'react'
-import Separator from './Separator'
 import { motion } from 'framer-motion'
 
 export default function About() {
   return (
-        <section className='relative flex justify-center' id="about-section">
-            <Separator></Separator>
-            <div className='flex flex-col items-center lg:flex-row m-4'>
+        <section className='flex justify-center my-5' id="about-section">
+            <div className='flex flex-col items-center lg:flex-row'>
                 <motion.div
                     transition={{ duration: 1}}
                     initial= {{ x: -30, opacity: 0 }}
@@ -20,8 +18,8 @@ export default function About() {
                     transition={{ duration: 1}}
                     initial= {{ x: 30, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
-                    className= 'flex flex-col items-center'>
-                    <div className='text-4xl text-center font-play font-bold border-b my-2'>
+                    className= 'flex flex-col items-center font-play'>
+                    <div className='text-[30px] md:text-[35px]'>
                         About Me
                     </div>
                     <div className='text-blue font-play md:ml-4'>
