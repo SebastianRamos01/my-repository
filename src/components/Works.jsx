@@ -4,7 +4,7 @@ import Work from './Work'
 export default function Works() {
     return (
         <section className='flex flex-col font-play' id='works-section'>
-            <div className='text-[30px] md:text-[35px] mx-10'>
+            <div className='text-[30px] md:text-[35px] md:mx-10 text-center'>
                 My Works
             </div>
             <Work

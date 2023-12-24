@@ -12,7 +12,6 @@ export default {
       'major': ['Major Mono Display', 'monospace']
     },
     colors: {
-      'transparent': 'transparent',
       'blue': '#1f2126',
       'red': '#ff0000',
       'yellow': '#f2b63d',

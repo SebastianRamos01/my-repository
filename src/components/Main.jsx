@@ -5,6 +5,10 @@ export default function Main() {
   return (
     <main id='home-section' 
         className='h-[90vh] flex flex-col justify-center font-play'>
+            {/* <img className='w-[250px] absolute top-40 left-32' src="images/in-universe.png" alt=""/>
+            <img className='w-[250px] absolute bottom-40 right-28' src="images/NailStore-home.png" alt=""/>
+            <img className='w-[250px] absolute top-32 right-36' src="images/in-universe-dashboard.png" alt=""/>
+            <img className='w-[250px] absolute bottom-32 left-44' src="images/stage-door.png" alt=""/> */}
         <div className='mx-5 md:mx-auto md:text-center text-blue w-fit'>
             <motion.div 
                 className='text-blue' 

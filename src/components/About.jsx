@@ -7,8 +7,8 @@ export default function About() {
             <div className='flex flex-col items-center lg:flex-row'>
                 <motion.div
                     transition={{ duration: 1}}
-                    initial= {{ x: -30, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
+                    initial= {{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
                     className='w-fit h-fit top-9'>
                     <div className='w-60 h-fit'>
                         <img src="images\avatar-me.png" alt="" className='h-full w-full rounded-full'/>
@@ -16,8 +16,8 @@ export default function About() {
                 </motion.div>
                 <motion.div 
                     transition={{ duration: 1}}
-                    initial= {{ x: 30, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
+                    initial= {{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
                     className= 'flex flex-col items-center font-play'>
                     <div className='text-[30px] md:text-[35px]'>
                         About Me

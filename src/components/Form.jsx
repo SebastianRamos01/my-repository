@@ -19,7 +19,7 @@ export default function Form() {
   return (
     <motion.form
         transition={{ duration: 1.5}}
-        initial={{ x: 60, opacity:0 }}
+        initial={{ x: 30, opacity:0 }}
         whileInView={{ x: 0, opacity:1 }}
         ref={form} 
         onSubmit={sendEmail} 
