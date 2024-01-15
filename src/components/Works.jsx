@@ -3,8 +3,8 @@ import Work from './Work'
 
 export default function Works() {
     return (
-        <section className='flex flex-col font-play' id='works-section'>
-            <div className='text-[30px] md:text-[35px] md:mx-10 text-center'>
+        <section className='flex flex-col font-play bg-gradient-to-br from-orange-100 to-pink-100 text-blue-950 py-10' id='works-section'>
+            <div className='text-[30px] md:text-[35px] mx-4 md:mx-40'>
                 My Works
             </div>
             <Work

@@ -1,17 +1,18 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import Scroll from './Scroll'
 
 export default function Main() {
   return (
     <main id='home-section' 
-        className='h-[90vh] flex flex-col justify-center font-play'>
+        className='h-[90vh] text-blue-950 flex flex-col justify-center font-play bg-gradient-to-br from-orange-100 to bg-pink-100'>
             {/* <img className='w-[250px] absolute top-40 left-32' src="images/in-universe.png" alt=""/>
             <img className='w-[250px] absolute bottom-40 right-28' src="images/NailStore-home.png" alt=""/>
             <img className='w-[250px] absolute top-32 right-36' src="images/in-universe-dashboard.png" alt=""/>
             <img className='w-[250px] absolute bottom-32 left-44' src="images/stage-door.png" alt=""/> */}
-        <div className='mx-5 md:mx-auto md:text-center text-blue w-fit'>
+        <div className='mx-5 md:mx-auto md:text-center w-fit'>
             <motion.div 
-                className='text-blue' 
+                className='' 
                 transition={{ duration: 1.5}}
                 initial={{ x: -30, opacity: 0}}
                 animate={{ x: 0, opacity: 1}}>
@@ -34,7 +35,7 @@ export default function Main() {
                 initial= {{ x: -30, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}>
                 <p className='text-[15px] md:text-[18px] text-ellipsis'>
-                    Desarrollo y Diseño de Productos Digitales.
+                    Developer and Designer of Digital Products.
                 </p>
             </motion.div>
         </div>
@@ -42,13 +43,14 @@ export default function Main() {
             transition={{ duration: 1.1}}
             initial= {{ x: -30, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            className='mx-5 my-1 md:mx-auto w-fit border-b text-left hover:border-r bg-white'>
+            className='mx-5 my-1 md:mx-auto w-fit'>
             <a href="#contact-section" className='w-fit '>
-                <p className='text-[16px] w-fit pr-3 lg:pr-5 hover:font-bold'>                        
-                    Contacto
+                <p className='text-[16px] w-fit pr-3 lg:px-5 opacity-70 font-semibold hover:opacity-100'>                        
+                    Contact
                 </p>
             </a>
         </motion.div>
+        <Scroll></Scroll>
     </main>
   )
 }

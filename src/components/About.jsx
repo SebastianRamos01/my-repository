@@ -3,67 +3,97 @@ import { motion } from 'framer-motion'
 
 export default function About() {
   return (
-        <section className='flex justify-center my-5' id="about-section">
-            <div className='flex flex-col items-center lg:flex-row'>
-                <motion.div
-                    transition={{ duration: 1}}
-                    initial= {{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    className='w-fit h-fit top-9'>
-                    <div className='w-60 h-fit'>
-                        <img src="images\avatar-me.png" alt="" className='h-full w-full rounded-full'/>
-                    </div>
-                </motion.div>
+        <section className='flex md:justify-center bg-gradient-to-bl from-pink-100 to-orange-100 lg:h-[90vh] font-play' id="about-section">
                 <motion.div 
                     transition={{ duration: 1}}
                     initial= {{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    className= 'flex flex-col items-center font-play'>
+                    className= 'flex flex-col lg:flex-row my-10 lg:m-auto mx-5 justify-center gap-5 lg:gap-10 text-blue-950'>
                     <div className='text-[30px] md:text-[35px]'>
                         About Me
                     </div>
-                    <div className='text-blue font-play md:ml-4'>
-                        <p className='text-center border-blue border text-lg p-2'>
+                    <div >
+                        <div className='font-semibold'>
+                            English.
+                        </div>
+                        <p className='text-[14px] w-[250px] pr-2'>
+                            I am a Full-Stack Web Developer with a strong inclination towards web design, constantly improving my development and design skills.
+                            Currently, I work as a freelancer dedicated to helping my clients achieve their goals in web development.
+                            Committed to offering the best product quality.
+                            I am open to the opportunity to collaborate and devise innovative solutions.
+                        </p>
+                    </div>
+                    <div className=''>
+                        <div className='font-semibold'>
+                            Spanish.
+                        </div>
+                        <p className='text-[14px] w-[250px] pr-2'>
                             Soy un Desarrollador Web Full-Stack con una fuerte inclinacion hacia el diseño web, constantemente mejorando mis habilidades de desarrollo y diseño.
                             Actualmente, Trabajo como freelancer dedicado a ayudar a mis clientes a lograr sus objetivos dentro del desarrollo web.
                             Comprometido, a ofrecer la mejor calidad del producto. 
                             Estoy abierto a la oportunidad de colaborar e idear innovadoras soluciones.
                         </p>
                     </div>
-                    <ul className='flex flex-wrap justify-center items-center m-2'>
-                        <li className= 'w-fit m-1'>
-                            <div className='text-yellow text-3xl'>
-                                <ion-icon name="logo-javascript"></ion-icon>
-                            </div>
-                        </li>
-                        <li className='w-fit m-1'>
-                            <div className='text-orange text-3xl'>
-                                <ion-icon name="logo-html5"></ion-icon>
-                            </div>
-                        </li>
-                        <li className='w-fit m-1'>
-                            <div className='text-light-blue text-3xl'>
-                                <ion-icon name="logo-css3"></ion-icon>
-                            </div>
-                        </li>
-                        <li className= 'w-fit m-1'>
-                            <div className='text-green text-3xl'>
-                                <ion-icon name="logo-nodejs"></ion-icon>
-                            </div>
-                        </li>
-                        <li className='w-fit m-1'>
-                            <div className='text-white-blue text-3xl'>
-                                <ion-icon name="logo-react"></ion-icon>
-                            </div>
-                        </li>
-                        <li className='w-fit m-1 font-play'>
-                            <div className='text-lg'>
+                    <div className=''>
+                        <div className='font-semibold'>
+                            Skills.
+                        </div>
+                        <ul className='pr-2 text-[14px]'>
+                            <li className=''>
+                                JavaScript
+                            </li>
+                            <li className=''>
+                                TypeScript
+                            </li>
+                            <li className=''>
+                                Html5
+                            </li>
+                            <li className=''>
+                                Css3
+                            </li>
+                            <li className=''>
+                                React.js
+                            </li>
+                            <li>
+                                Next.js
+                            </li>
+                            <li>
                                 MySql
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div className='font-semibold'>
+                            Lenguages.
+                        </div>
+                        <ul className='text-[14px] pr-2'>
+                            <li>Spanish</li>
+                            <li>English</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div className='font-semibold'>
+                            Social.
+                        </div>
+                        <ul className='text-[14px] pr-2'>
+                            <li>
+                                <a href="https://www.sebasm.sr@gmail.com" className='underline'>
+                                    Gmail
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/_sbaramos" className='underline'>
+                                    Instagram
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/SebastianRamos01" className='underline'>
+                                    Github
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </motion.div>
-            </div>
         </section>
   )
 }

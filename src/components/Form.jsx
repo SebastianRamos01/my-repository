@@ -19,38 +19,25 @@ export default function Form() {
   return (
     <motion.form
         transition={{ duration: 1.5}}
-        initial={{ x: 30, opacity:0 }}
+        initial={{ opacity:0 }}
         whileInView={{ x: 0, opacity:1 }}
         ref={form} 
         onSubmit={sendEmail} 
         action="" 
-        className='w-[75%] h-fit rounded flex flex-col lg:w-5/12 lg:flex-wrap lg:flex-row lg:m-5'>
-            <div className='w-full lg:w-1/2 lg:mr-auto lg:pr-1'>
-                <div className='text-blue w-fit font-semibold font-play'>
-                    Nombre
-                </div>
-                <div className='border border-blue w-full'>
-                    <input type="text" name="user_name" id="" placeholder='Un Nombre' className='outline-none p-1 bg-white w-full text-blue'/>
-                </div>
+        className='w-full px-5 rounded flex gap-1 lg:gap-[10px] flex-col lg:w-5/12 lg:flex-wrap lg:flex-row lg:m-5 font-play'>
+            <div className='w-full lg:w-[49%]'>
+                <input type="text" name="user_name" id="" placeholder='Name' className='outline-none p-1 w-full text-blue-950'/>
             </div>
-            <div className='w-full lg:w-1/2 lg:pl-1'>
-                <div className='text-blue font-semibold font-play'>
-                    Email
-                </div>
-                <div className='border border-blue w-full'>
-                    <input type="text" name="user_email" id="" placeholder='Un Email' required className='outline-none p-1 bg-white w-full text-blue'/>
+            <div className='w-full lg:w-[49%]'>
+                <input type="text" name="user_email" id="" placeholder='Email' required className='outline-none p-1 w-full text-blue-950'/>
+            </div>
+            <div className='w-full'>
+                <div className='border text-blue w-full'>
+                    <textarea name="message" id="" cols="30" rows="10" placeholder='Message.' className='outline-none p-1 w-full text-blue resize-none'></textarea>
                 </div>
             </div>
             <div className='w-full'>
-                <div className='text-blue font-semibold font-play'>
-                    Mensaje
-                </div>
-                <div className='border text-blue w-full'>
-                    <textarea name="message" id="" cols="30" rows="10" placeholder='Tu mensaje.' className='outline-none p-1 bg-white w-full text-blue resize-none'></textarea>
-                </div>
-            </div>
-            <div className='my-3 w-full font-play'>
-                <input type="submit" value="Mandar Mensaje" className='text-blue border rounded p-2 w-full hover:bg-blue hover:text-white'/>
+                <input type="submit" value="Send Message" className='text-[#f3e8ff] rounded p-2 w-full bg-blue-950 cursor-pointer'/>
             </div>
         </motion.form>
   )
