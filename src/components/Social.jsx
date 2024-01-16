@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Social() {
     return (
-        <div className='text-blue-950 text-[23px] flex justify-center items-center'>
+        <div className='text-blue-950 text-[23px] justify-center items-center hidden lg:flex'>
             <div className='p-[6px]'>
                 <a href="https://www.instagram.com/_sbaramos" className='flex opacity-70 hover:opacity-100'>
                     <ion-icon name="logo-instagram"></ion-icon>

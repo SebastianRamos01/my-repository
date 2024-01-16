@@ -77,9 +77,7 @@ export default function About() {
                         </div>
                         <ul className='text-[14px] pr-2'>
                             <li>
-                                <a href="https://www.sebasm.sr@gmail.com" className='underline'>
-                                    Gmail
-                                </a>
+                                sebasm.sr@gmail.com
                             </li>
                             <li>
                                 <a href="https://www.instagram.com/_sbaramos" className='underline'>
