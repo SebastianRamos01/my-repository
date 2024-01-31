@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Social from './Social'
 
 export default function NavBar() {
 

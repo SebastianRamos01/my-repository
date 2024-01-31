@@ -16,13 +16,6 @@ export default function Footer() {
             <div className='text-[26px] md:text-[32px]'>
                 Send a message!
             </div>
-            <div className='text-blue border-b text-blue-950 opacity-80 hover:opacity-100'>
-                <a href="#home-section">
-                    <p className='text-[16px] lg:px-4 font-semibold'>
-                        Go Up
-                    </p>
-                </a>
-            </div>
         </motion.div>
         <Form></Form>
     </footer>

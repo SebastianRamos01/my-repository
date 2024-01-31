@@ -43,9 +43,9 @@ export default function Main() {
             transition={{ duration: 1.1}}
             initial= {{ x: -30, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            className='mx-5 my-1 md:mx-auto w-fit'>
-            <a href="#contact-section" className='w-fit '>
-                <p className='text-[16px] w-fit pr-3 lg:px-5 opacity-70 font-semibold hover:opacity-100'>                        
+            className='mx-5 my-1 md:mx-auto w-fit bg-gradient-to-r from-orange-400 to bg-orange-500 hover:bg-gradient-to-r hover:from-orange-400 to hover:bg-orange-600 rounded'>
+            <a href="#contact-section" className='w-fit'>
+                <p className='text-[16px] w-fit px-3 lg:px-5 text-white'>                        
                     Contact
                 </p>
             </a>
