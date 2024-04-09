@@ -1,9 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html{
-    scroll-behavior: smooth;
-}

@@ -7,9 +7,8 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      'bebas': ['Bebas Neue', 'sans-serif'],
-      'play': ['Playfair Display', 'sans-serif'],
-      'major': ['Major Mono Display', 'monospace']
+      'biz': ['BIZ UDPMincho', 'serif'],
+      'josefin': ['Josefin Sans', 'sans-serif']
     }
   },
   plugins: [],
