@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="font-josefin absolute bottom-2 w-full">
       <div className="flex justify-between w-full px-5">
         <p>2023, Ramos Sebastian</p>
-        <span className="underline">Intagram</span>
+        <a className="underline" href="https://www.instagram.com/_sbaramos">Intagram</a>
       </div>
     </footer>
   );

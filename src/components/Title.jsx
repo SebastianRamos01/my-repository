@@ -26,7 +26,7 @@ export default function Title({title}) {
         onMouseLeave={() => {isHover()}}
         >
         <p className=''>
-            {title}
+            {title}.
         </p>
         <motion.div 
             className='w-[68px] h-[2px] bg-[#fdb9a9]'

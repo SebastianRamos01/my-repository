@@ -8,14 +8,15 @@ export default function Contact() {
     <Inner>
       <section className="bg-[#600a18] font-biz text-[#fdb9a9] h-screen">
         <Header></Header>
-        <div className="flex items-center h-full px-5">
+        <div className="flex items-center lg:justify-center h-full px-5">
           <div className="">
-            <div className="text-[35px]">GET IN TOUCH.</div>
-            <ul className="font-josefin my-3">
-                <span className="font-extrabold">
-                    Socials.
+            <div className="text-[35px] lg:text-[40px]">GET IN TOUCH.</div>
+            <div className='h-[2px] w-full bg-[#fdb9a9]'></div>
+            <ul className="font-josefin my-3 lg:text-center">
+                <span className="">
+                    Send me a message in any of my socials
                 </span>
-              <li>sebasm.sr@gmail.com</li>
+              <li className="underline">sebasm.sr@gmail.com</li>
               <li>
                 <a
                   href="https://www.instagram.com/_sbaramos"

@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 export default function About() {
   return (
     <Inner>
-      <section className="bg-[#600a18] font-josefin text-[#fdb9a9] relative">
+      <section className="bg-[#600a18] font-josefin text-[#fdb9a9] relative lg:h-screen">
         <Header></Header>
         <div className="px-5 py-10">
           <div className="mt-5">

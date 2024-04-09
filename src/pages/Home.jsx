@@ -7,18 +7,18 @@ import Header from '../components/Header'
 export default function Home() {
   return (
     <Inner>
-        <main className='h-screen bg-[#600a18] font-biz text-[#fdb9a9]'>
+        <main className='h-[100dvh] bg-[#600a18] font-biz text-[#fdb9a9]'>
             <Header></Header>
             <div className='flex justify-center items-center h-full'>
-                <h1 className='text-[35px] w-[300px] h-fit flex flex-col gap-1'>
+                <h1 className='text-[35px] lg:text-[40px] w-[300px] lg:w-[350px] h-fit flex flex-col gap-1'>
                     <Link className='w-fit ml-[85px]' to={'/work'}>
-                        <Title title={"WORK."}></Title>
+                        <Title title={"WORK"}></Title>
                     </Link>
                     <Link className='w-fit ml-auto' to={'/about'}>
-                        <Title title={"ABOUT."}></Title>
+                        <Title title={"ABOUT"}></Title>
                     </Link>
                     <Link className='w-fit' to={'/contact'}>
-                        <Title title={"CONTACT."}></Title>
+                        <Title title={"CONTACT"}></Title>
                     </Link>
                 </h1>
             </div>
