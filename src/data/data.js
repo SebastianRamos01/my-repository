@@ -15,12 +15,12 @@ export const works = [
         title: 'IME',
         img: 'ime-phone.png',
         imgBig: 'anim-app.png',
-        description: 'In-universe is a posting application about the universe, with a simple design with colors related to the theme of the application. Developed with React and Tailwind. It is still in development, seeking to give more interactivity to users.'
+        description: 'This page is made to demonstrate previously learned animations. It was created with framer-motion, react and typeScript'
     },
     {
         title: 'Opencuriosity',
-        img: 'in-universe.png',
-        imgBig: 'in-universe.png',
-        description: 'In-universe is a posting application about the universe, with a simple design with colors related to the theme of the application. Developed with React and Tailwind. It is still in development, seeking to give more interactivity to users.'
+        img: 'opencuriosity.png',
+        imgBig: 'opnecuriosity-phone.png',
+        description: 'opencuriosity is an educational project to teach science in a more interactive way (inspired by brilliant.org) for all ages and for any level of knowledge. (Project still in design)'
     },
 ]
