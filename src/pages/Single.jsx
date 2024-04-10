@@ -25,7 +25,7 @@ export default function Single() {
                     <div className='h-[2px] w-full bg-[#fdb9a9]'>
                     </div>
                 </div>
-                <div className='w-full mt-5 border-[#fdb9a9] border-4 h-[610px]'>
+                <div className='w-full mt-5 border-[#fdb9a9] border-4 h-[620px]'>
                     <img src={`/images/${work.img}`} alt="phone-img"  className='w-full h-full md:hidden'/>
                     <img src={`/images/${work.imgBig}`} alt="desktop-img"  className='w-full h-full hidden md:block'/>
                 </div>
