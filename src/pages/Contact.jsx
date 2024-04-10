@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 export default function Contact() {
   return (
     <Inner>
-      <section className="bg-[#600a18] font-biz text-[#fdb9a9] h-screen">
+      <section className="bg-[#600a18] font-biz text-[#fdb9a9] h-[100dvh]">
         <Header></Header>
         <div className="flex items-center lg:justify-center h-full px-5">
           <div className="">

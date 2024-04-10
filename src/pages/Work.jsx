@@ -24,7 +24,7 @@ const perspective = {
 export default function Work() {
   return (
     <Inner>
-        <section className='bg-[#600a18] font-biz text-[#fdb9a9] h-screen'>
+        <section className='bg-[#600a18] font-biz text-[#fdb9a9] h-[100dvh]'>
             <Header></Header>
             <div className='px-5 flex items-center justify-center h-full flex-col'>
                 {works.map((work, i) => {
