@@ -19,8 +19,8 @@ export const works = [
     },
     {
         title: 'Opencuriosity',
-        img: 'opencuriosity.png',
-        imgBig: 'opnecuriosity-phone.png',
+        img: 'opnecuriosity-phone.png',
+        imgBig: 'opencuriosity.png',
         description: 'opencuriosity is an educational project to teach science in a more interactive way (inspired by brilliant.org) for all ages and for any level of knowledge. (Project still in design)'
     },
 ]
