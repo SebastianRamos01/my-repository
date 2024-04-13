@@ -36,17 +36,15 @@ export default function Work() {
                                 exit="exit"
                                 initial="initial"
                                 className='w-full lg:w-fit'
+                                key={i}
                             >
-                                <Link
-                                    to={`/work/${work.title}`}
-                                    key={i}
-                                    className='w-full text-[35px] lg:text-[40px]'
-                                    >
+                                <Link to={`/work/${work.title}`}>
                                     <Title
-                                        title={work.title.toUpperCase()}
+                                        title={work.title}
                                     >
                                     </Title>
                                 </Link>
+                    
                             </motion.div>
                     )
                 })}

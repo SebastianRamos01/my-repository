@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const variants = {
     open: {
@@ -21,19 +22,20 @@ export default function Title({title}) {
     }
 
   return (
-    <span 
+    <div
+      className='text-[35px] lg:text-[40px]'
         onMouseEnter={() => {isHover()}}
         onMouseLeave={() => {isHover()}}
         >
-        <p className=''>
-            {title}.
-        </p>
-        <motion.div 
-            className='w-[68px] h-[2px] bg-[#fdb9a9]'
-            variants={variants}
-            animate={ active ? 'open' : 'closed' }
-            >
-        </motion.div>
-    </span>
+            <p  className=''>
+                {title.toUpperCase()}.
+            </p>
+            <motion.div 
+                className='w-[68px] h-[2px] bg-[#fdb9a9]'
+                variants={variants}
+                animate={ active ? 'open' : 'closed' }
+                >
+            </motion.div>
+    </div>
   )
 }
