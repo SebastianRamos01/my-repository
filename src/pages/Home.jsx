@@ -3,6 +3,8 @@ import Header from '../components/Header'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
+import { works } from '../data/data'
+import Card from '../components/Card'
 
 const perspective = {
     initial: {
@@ -28,7 +30,7 @@ export default function Home() {
         <Header></Header>
         <main className='bg-[#F4F4F2] font-roboto text-[#2D2926] px-5'>
             <section className='flex items-end h-[100dvh]'>
-                <h2 className='flex flex-wrap my-5'>
+                <h2 className='flex flex-wrap my-5 lg:w-[605px] text-3xl lg:text-4xl'>
                     {words.map((word, i) => {
                         const isTargetPhrase = i >= 2 && i <= 6;
                         return (
@@ -39,31 +41,27 @@ export default function Home() {
                                 exit="exit"
                                 initial="initial"
                                 key={i} 
-                                className={`font-thin text-3xl mr-1 leading-tight ${isTargetPhrase ? 'underline decoration-1 underline-offset-4' : ''}`}>
+                                className={`font-extralight mr-[6px] leading-tight ${isTargetPhrase ? 'underline decoration-1 underline-offset-4' : ''}`}>
                                 {word}
                         </motion.p>)
                     })}
                 </h2>
             </section>
-            <section className='flex flex-col gap-4'>
-                <div className='bg-[#e3e3de] flex justify-center rounded'>
-                    <div className='w-1/2 py-3'>
-                        <img src="/images/ime-phone.png" alt="" />
-                    </div>
-                </div>
-                <div className='bg-[#e3e3de] flex justify-center rounded'>
-                    <div className='w-1/2 py-3'>
-                        <img src="/images/in-universe-phone.png" alt="" />
-                    </div>
-                </div>
-                <div className='bg-[#e3e3de] flex justify-center rounded'>
-                    <div className='w-1/2 py-3'>
-                        <img src="/images/nailstore-phone.png" alt="" />
-                    </div>
-                </div>
+            <section className='flex flex-col gap-4 lg:flex-row lg:justify-evenly'>
+                {
+                    works.map((work, i) => {
+                        return <Card
+                            img={work.img}
+                            index={i}
+                            title={work.title}
+                            key={i}
+                        >
+                        </Card>
+                    })
+                }
             </section>
-            <Footer></Footer>
         </main>
+        <Footer></Footer>
     </Inner>
   )
 }

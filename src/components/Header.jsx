@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
-    <div className='font-roboto font-extralight absolute top-5 flex w-full justify-between'>
+    <div className='font-roboto font-light absolute top-5 flex w-full justify-between'>
       <div className='mx-5'>
         <Link to={'/'}>
           Sebastian<br />

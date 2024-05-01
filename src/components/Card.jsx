@@ -1,16 +1,17 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
-export default function Card({title}) {
+export default function Card({ title, index, img,  }) {
   return (
-    <div className='text-[35px] flex items-center font-biz'>
-        <div className='w-fit rounded-b-md'>
-            <p className='text-[#fdb9a9]'>
-                {title}.
-            </p>
-            <div className='h-1 bg-[#fdb9a9]'>
-            </div>
+    <div className="bg-[#e3e3de] flex justify-center rounded relative max-w-[385px]">
+      <Link to={`/work/${title}`} className="flex">
+        <div className="w-1/2 py-3 z-[5]">
+          <img src={`/images/${img}`} alt={title} />
         </div>
+        <div className="absolute top-0 right-0">
+          <p className="font-medium opacity-50 leading-none text-9xl mx-1">#{index}</p>
+        </div>
+      </Link>
     </div>
-  )
+  );
 }

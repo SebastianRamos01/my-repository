@@ -7,14 +7,14 @@ export default function About() {
   return (
     <Inner>
       <Header></Header>
-      <section className="bg-[#F4F4F2] font-roboto text-[#2D2926] px-5 font-extralight">
-        <div className="py-10">
-          <div className="mt-5">
-            <div className="rounded-full w-[335px] h-[335px] overflow-hidden relative">
-              <img src="/images/photo.jpg" alt="photo" className="absolute -bottom-16"/>
+      <section className="bg-[#F4F4F2] font-roboto text-[#2D2926] font-light pt-24">
+            <div className="h-[200px] overflow-hidden relative max-w-[425px]">
+              <img src="/images/photo.jpg" alt="photo" className="absolute -bottom-[220px]"/>
             </div>
+        <div className="px-5">
+          <div className="mt-5">
             <div className="">This is me!!</div>
-            <p className="font-josefin">
+            <p className="">
               I am a Full-Stack Web Developer with a strong inclination towards
               front-end development and web design, constantly improving my development and design skills.
               Currently, I work as a freelancer dedicated to helping my clients
@@ -24,7 +24,7 @@ export default function About() {
             </p>
           </div>
           <div className="mt-5">This is some of my skills in</div>
-          <div className="flex gap-5">
+          <div className="flex gap-5 mt-1">
             <ul className="">
               <p className="underline underline-offset-4 decoration-1">Development</p>
               <li className="">TypeScript</li>
@@ -45,10 +45,16 @@ export default function About() {
           <div className="mt-5">
             <div className="">This are my services</div>
             <ul className="">
-              <li>Design</li>
-              <li>Development</li>
-              <li>Full Web</li>
+              <li className="underline">Design</li>
+              <li className="underline">Development</li>
+              <li className="underline">Full Web</li>
             </ul>
+          </div>
+          <div className="mt-5">
+            <p>
+              Send me a message or an email
+            </p>
+            <a href="mailto:sebasm.sr@gmail.com" className="underline">sebasm.sr@gmail.com</a>
           </div>
         </div>
         <Footer></Footer>
