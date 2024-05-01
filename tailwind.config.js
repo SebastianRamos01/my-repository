@@ -7,8 +7,7 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      'biz': ['BIZ UDPMincho', 'serif'],
-      'josefin': ['Josefin Sans', 'sans-serif']
+      'roboto': ['Roboto', 'sans-serif']
     }
   },
   plugins: [],

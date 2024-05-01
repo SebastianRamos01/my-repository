@@ -6,36 +6,27 @@ import Footer from "../components/Footer";
 export default function About() {
   return (
     <Inner>
-      <section className="bg-[#600a18] font-josefin text-[#fdb9a9] relative lg:h-screen">
-        <Header></Header>
-        <div className="px-5 py-10">
+      <Header></Header>
+      <section className="bg-[#F4F4F2] font-roboto text-[#2D2926] px-5 font-extralight">
+        <div className="py-10">
           <div className="mt-5">
-            <div className="font-extrabold">English.</div>
+            <div className="rounded-full w-[335px] h-[335px] overflow-hidden relative">
+              <img src="/images/photo.jpg" alt="photo" className="absolute -bottom-16"/>
+            </div>
+            <div className="">This is me!!</div>
             <p className="font-josefin">
               I am a Full-Stack Web Developer with a strong inclination towards
-              web design, constantly improving my development and design skills.
+              front-end development and web design, constantly improving my development and design skills.
               Currently, I work as a freelancer dedicated to helping my clients
               achieve their goals in web development. Committed to offering the
               best product quality. I am open to the opportunity to collaborate
               and devise innovative solutions.
             </p>
           </div>
-          <div className="mt-5">
-            <div className="font-extrabold">Spanish.</div>
-            <p className="font-josefin">
-              Soy un Desarrollador Web Full-Stack con una fuerte inclinacion
-              hacia el diseño web, constantemente mejorando mis habilidades de
-              desarrollo y diseño. Actualmente, Trabajo como freelancer dedicado
-              a ayudar a mis clientes a lograr sus objetivos dentro del
-              desarrollo web. Comprometido, a ofrecer la mejor calidad del
-              producto. Estoy abierto a la oportunidad de colaborar e idear
-              innovadoras soluciones.
-            </p>
-          </div>
-          <div className="mt-5">
-            <div className="font-extrabold">Skills.</div>
-            <ul className="font-josefin">
-              <li className="">JavaScript</li>
+          <div className="mt-5">This is some of my skills in</div>
+          <div className="flex gap-5">
+            <ul className="">
+              <p className="underline underline-offset-4 decoration-1">Development</p>
               <li className="">TypeScript</li>
               <li className="">Html5</li>
               <li className="">Css3</li>
@@ -43,15 +34,22 @@ export default function About() {
               <li>Next.js</li>
               <li>MySql</li>
             </ul>
-          </div>
-          <div className="mt-5">
-            <div className="font-extrabold">Idioms.</div>
-            <ul className="font-josefin">
-              <li>Spanish</li>
-              <li>English</li>
+            <ul className="">
+              <p className="underline underline-offset-4 decoration-1">Design</p>
+              <li className="">Figma</li>
+              <li>UX/UI Design</li>
+              <li>Movile optimizacion</li>
+              <li>SEO</li>
             </ul>
           </div>
-          
+          <div className="mt-5">
+            <div className="">This are my services</div>
+            <ul className="">
+              <li>Design</li>
+              <li>Development</li>
+              <li>Full Web</li>
+            </ul>
+          </div>
         </div>
         <Footer></Footer>
       </section>

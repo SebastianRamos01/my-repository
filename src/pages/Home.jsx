@@ -1,51 +1,67 @@
-import Title from '../components/Title'
 import Inner from '../components/Inner'
-import Footer from '../components/Footer'
 import Header from '../components/Header'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import Footer from '../components/Footer'
 
-const parent = {
-    animate: {
+const perspective = {
+    initial: {
+        opacity: 0
+    },
+    enter: (i) => ({
+        opacity: 1,
         transition: {
-            delayChildren: 0.3,
-            staggerChildren: 0.2
-          }
+            delay: 0.5 + (i * 0.1)
+        }
+    }),
+    exit: {
+        opacity: 0,
     }
 }
 
-const transition = { duration: .8, ease: [0.76, 0, 0.24, 1]}
-const slideUp = {
-  initial: { y: 100, opacity: 0 },
-  animate: { y: 0, opacity: 1 },
-}
+const text = "Hello!! I’m front-end developer and web designer who is passionate in creating elegant and creative stuff."
+const words = text.split(" ")
 
 export default function Home() {
   return (
     <Inner>
-        <main className='h-[100dvh] bg-[#600a18] font-biz text-[#fdb9a9]'>
-            <Header></Header>
-            <div className='flex justify-center items-center h-full'>
-                <motion.h1 variants={parent} animate='animate' initial='initial' exit='exit' 
-                    className='w-[300px] lg:w-[350px] h-fit flex flex-col items-center gap-4'>
-                        {
-                            ['work', 'about', 'contact'].map((i) => {
-                                return (
-                                    <motion.div
-                                        key={i}
-                                        variants={slideUp} 
-                                        transition={transition}
-                                        className='w-fit'>
-                                        <Link to={i}>
-                                            <Title 
-                                                title={i}
-                                            ></Title>
-                                        </Link>
-                                    </motion.div>)
-                            })
-                        }
-                </motion.h1>
-            </div>
+        <Header></Header>
+        <main className='bg-[#F4F4F2] font-roboto text-[#2D2926] px-5'>
+            <section className='flex items-end h-[100dvh]'>
+                <h2 className='flex flex-wrap my-5'>
+                    {words.map((word, i) => {
+                        const isTargetPhrase = i >= 2 && i <= 6;
+                        return (
+                            <motion.p 
+                                variants={perspective}
+                                custom={i}
+                                animate="enter"
+                                exit="exit"
+                                initial="initial"
+                                key={i} 
+                                className={`font-thin text-3xl mr-1 leading-tight ${isTargetPhrase ? 'underline decoration-1 underline-offset-4' : ''}`}>
+                                {word}
+                        </motion.p>)
+                    })}
+                </h2>
+            </section>
+            <section className='flex flex-col gap-4'>
+                <div className='bg-[#e3e3de] flex justify-center rounded'>
+                    <div className='w-1/2 py-3'>
+                        <img src="/images/ime-phone.png" alt="" />
+                    </div>
+                </div>
+                <div className='bg-[#e3e3de] flex justify-center rounded'>
+                    <div className='w-1/2 py-3'>
+                        <img src="/images/in-universe-phone.png" alt="" />
+                    </div>
+                </div>
+                <div className='bg-[#e3e3de] flex justify-center rounded'>
+                    <div className='w-1/2 py-3'>
+                        <img src="/images/nailstore-phone.png" alt="" />
+                    </div>
+                </div>
+            </section>
             <Footer></Footer>
         </main>
     </Inner>

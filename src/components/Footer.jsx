@@ -2,10 +2,10 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="font-josefin absolute bottom-2 w-full">
-      <div className="flex justify-between w-full px-5">
+    <footer className="w-full font-extralight">
+      <div className="flex justify-between items-center w-full h-10">
         <p>2023, Ramos Sebastian</p>
-        <a className="underline" href="https://www.instagram.com/_sbaramos">Intagram</a>
+        <a className="underline underline-offset-4 decoration-1" href="https://www.instagram.com/_sbaramos">Intagram</a>
       </div>
     </footer>
   );
