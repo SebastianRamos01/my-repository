@@ -51,10 +51,11 @@ export default function Home() {
                 {
                     works.map((work, i) => {
                         return <Card
-                            img={work.img}
+                            img={work.img.one}
                             index={i}
                             title={work.title}
                             key={i}
+                            bg={work.color}
                         >
                         </Card>
                     })
