@@ -14,19 +14,19 @@ export const works = [
     {
         title: 'Nailstore',
         color: '#fce7f3',
-        header: 'A blog of astronomy for fun and for everyone interested in the physics field',
-        description: 'An e-commerce of manicure products. The front-end of the application was developed with HTML, CSS and JavaScript using responsive site practices for all devices. The back-end was developed in JavaScript with Express and Node.js, following MVC practices. The database was designed with MySql, assembled and organized using Sequelize.',
+        header: 'A manicure web e-commerce for selling and buying products',
+        description: 'An e-commerce of manicure products. The front-end of the application was developed with HTML, CSS and JavaScript using responsive site practices for all devices. The back-end was developed in JavaScript with Express and Node.js, following MVC practices. The database was designed with MySql, assembled and organized using Sequelize. (Actually in redesign)',
         img: {
             one: 'nailstore-phone.png',
-            two: 'in-universe-2-phone.png',
-            three: 'in-universe-3-phone.png',
-            four: 'in-universe-4-phone.png',
+            two: 'nailstore-phone-2.png',
+            three: 'nailstore-phone-3.png',
+            four: 'nailstore-phone-4.png',
         },
     },
     {
         title: 'IME',
         color: '#fee2e2',
-        header: 'A blog of astronomy for fun and for everyone interested in the physics field',
+        header: 'An App developed for web design with animations',
         description: 'This page is made to demonstrate previously learned animations. It was created with framer-motion, react and typeScript',
         img: {
             one: 'ime-phone.png',
@@ -38,7 +38,7 @@ export const works = [
     {
         title: 'Opencuriosity',
         color: "#DEDEFF",
-        header: 'A blog of astronomy for fun and for everyone interested in the physics field',
+        header: 'An App to learn about physics with differents levels of courses',
         description: 'opencuriosity is an educational project to teach science in a more interactive way (inspired by brilliant.org) for all ages and for any level of knowledge. (Project still in design)',
         img: {
             one: 'opencuriosity-phone.png',
