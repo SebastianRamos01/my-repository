@@ -30,7 +30,7 @@ export default function Home() {
         <Header></Header>
         <main className='bg-[#F4F4F2] font-roboto text-[#2D2926] px-5'>
             <section className='flex items-end h-[100dvh]'>
-                <h2 className='flex flex-wrap my-5 lg:w-[605px] text-3xl lg:text-4xl'>
+                <h2 className='flex flex-wrap my-8 lg:w-[605px] text-3xl lg:text-4xl'>
                     {words.map((word, i) => {
                         const isTargetPhrase = i >= 2 && i <= 6;
                         return (

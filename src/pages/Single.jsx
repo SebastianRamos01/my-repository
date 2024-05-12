@@ -31,7 +31,10 @@ export default function Single() {
             </div>
                 ))}
         </div>
-        <div>
+        <div className="py-5">
+          <p className="font-normal">
+            Project Detail
+          </p>
             <p className="font-light">
                 {work.description}
             </p>
