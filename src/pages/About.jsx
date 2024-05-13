@@ -7,9 +7,9 @@ export default function About() {
   return (
     <Inner>
       <Header></Header>
-      <section className="bg-[#F4F4F2] font-roboto text-[#2D2926] font-light pt-24">
-            <div className="h-[200px] overflow-hidden relative max-w-[450px]">
-              <img src="/images/photo.jpg" alt="photo" className="absolute -bottom-[180px]"/>
+      <section className="bg-neutral-100 font-roboto text-[#2D2926] font-light pt-24">
+            <div className="h-[200px] overflow-hidden relative lg:w-[45%] lg:h-[280px]">
+              <img src="/images/photo.jpg" alt="photo" className="absolute -bottom-[180px] lg:-top-[75%]"/>
             </div>
         <div className="px-5">
           <div className="mt-5">

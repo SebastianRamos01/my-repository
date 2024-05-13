@@ -14,20 +14,24 @@ export default function Single() {
   return (
     <Inner>
       <Header></Header>
-      <section className="font-roboto text-[#2D2926] px-5 pt-24 bg-[#F4F4F2] lg:h-screen">
+      <section className="font-roboto text-[#2D2926] px-5 pt-24 bg-neutral-100">
         <div>
           <p className="text-3xl lg:text-4xl font-extralight my-1">
             {work.header}
           </p>
         </div>
-        <div className="flex flex-col gap-5 lg:flex-row" >
+        <div className="flex flex-col gap-3 lg:gap-4 lg:flex-row lg:flex-wrap">
           {Object.values(image).map((elem, i) => (
-            <div className="flex justify-center rounded relative max-w-[385px]" 
+            <div className="flex justify-center items-center rounded-lg relative h-[260px] lg:w-[49%] lg:h-[450px]" 
               key={i}
               style={{backgroundColor: work.color}}>
-            <div className="w-1/2 py-3 z-[5]">
-                <img src={`/images/${elem}`} alt="" />
-            </div>
+            <div className="w-[40%] lg:w-[40%] h-[95%] lg:h-[95%] py-3 z-[5] mx-5">
+                    <img
+                      src={`/images/${elem}`}
+                      alt={work.title}
+                      className="w-full h-full rounded-md"
+                    />
+                  </div>
             </div>
                 ))}
         </div>
