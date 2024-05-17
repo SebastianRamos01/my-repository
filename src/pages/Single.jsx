@@ -9,42 +9,74 @@ export default function Single() {
   const { title } = useParams();
 
   const work = works.find((e) => e.title === title);
-  const image = work.img
+  const image = work.phone
 
   return (
     <Inner>
       <Header></Header>
-      <section className="font-roboto text-[#2D2926] px-5 pt-24 bg-neutral-100">
+      <section className="font-urbanist text-[#2D2926] px-5 py-20">
+        <div className="absolute left-[-2%]">
+          <p className="text-4xl lg:text-4xl font-bold">
+            {work.title.toUpperCase()}
+          </p>
+        </div>
+        <div className="bg-slate-200 p-2 flex justify-between mt-12 mb-3 rounded">
+          <div className="w-[48%] h-[200px] overflow-hidden">
+            <img src={`/images/${work.main}`} alt={work.title} className=""/>
+          </div>
+          <div className="w-[48%] h-[200px] overflow-hidden relative">
+            <img src={`/images/${work.main}`} alt={work.title} className="absolute bottom-0"/>
+          </div>
+        </div>
         <div>
-          <p className="text-3xl lg:text-4xl font-extralight my-1">
-            {work.header}
+          <p className="text-4xl">
+            {work.header .toUpperCase()}
           </p>
         </div>
-        <div className="flex flex-col gap-3 lg:gap-4 lg:flex-row lg:flex-wrap">
-          {Object.values(image).map((elem, i) => (
-            <div className="flex justify-center items-center rounded-lg relative h-[260px] lg:w-[49%] lg:h-[450px]" 
-              key={i}
-              style={{backgroundColor: work.color}}>
-            <div className="w-[40%] lg:w-[40%] h-[95%] lg:h-[95%] py-3 z-[5] mx-5">
-                    <img
-                      src={`/images/${elem}`}
-                      alt={work.title}
-                      className="w-full h-full rounded-md"
-                    />
-                  </div>
-            </div>
-                ))}
+        <div className="bg-slate-200 p-2 flex flex-col gap-2 items-center justify-between my-3 rounded">
+          <div className="h-[200px] overflow-hidden">
+            <img src={`/images/${work.main}`} alt={work.title} className=""/>
+          </div>
+          <div className="w-[80%] h-[160px] overflow-hidden">
+            <img src={`/images/${work.main}`} alt={work.title} className=""/>
+          </div>
+          <div className="w-[32%] h-[200px] overflow-hidden relative">
+            <img src={`/images/${work.secondary}`} alt={work.title} className="absolute"/>
+          </div>
         </div>
-        <div className="py-5">
-          <p className="font-normal">
-            Project Detail
+        <div className="py-2">
+          <p className="font-bold">
+            PROJECT CONTRIBUTION
           </p>
-            <p className="font-light">
+            <p className="">
+                {work.rol}
+            </p>
+        </div>
+        <div className="py-2">
+          <p className="font-bold">
+            PROJECT OVERVIEW
+          </p>
+            <p className="">
                 {work.description}
             </p>
         </div>
+        <div className="bg-slate-200 p-2 flex justify-between my-2 rounded">
+          <div className="w-[60%]">
+            <img src={`/images/${work.main}`} alt={work.title} className=""/>
+          </div>
+          <div className="w-[35%]">
+            <img src={`/images/${work.secondary}`} alt={work.title} className=""/>
+          </div>
+        </div>
+        <div className="absolute right-0">
+          <p className="font-bold">
+            CLICK HERE
+          </p>
+          <p className="font-bold text-4xl">
+            NEXT PROJECT
+          </p>
+        </div>
       </section>
-        <Footer></Footer>
     </Inner>
   );
 }

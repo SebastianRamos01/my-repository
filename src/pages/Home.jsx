@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import { works } from "../data/data";
+import { useMediaQuery } from "react-responsive";
 
 const perspective = {
   initial: {
@@ -13,6 +14,7 @@ const perspective = {
     opacity: 1,
     transition: {
       delay: 0.5 + i * 0.1,
+      ease: [0.7, 0, 0.84, 0]
     },
   }),
   exit: {
@@ -20,72 +22,91 @@ const perspective = {
   },
 };
 
-const text = "Hello!! I’m front-end developer and web designer who is passionate in creating elegant and creative stuff.";
-const words = text.split(" ");
+const titles = {
+  initial: {
+    y: 100
+  },
+  enter: (i) => ({
+    y: 0,
+    transition: {
+      delay: 0.1 + i * 0.1,
+    },
+  }),
+  exit: {
+    y: 100
+  },
+};
 
 export default function Home() {
+  
+  const isMobile = useMediaQuery({ query: '(max-width: 470px)' })
+
+  const title = ['F','R','O','N','T',' ','E','N','D',' ','D','E','V','E','L','O','P','E','R',]
+  const title2 = ['&',' ','W','E','B',' ','D','E','S','I','G','N','E','R',]
+  
   return (
     <Inner>
       <Header></Header>
-      <main className="bg-neutral-100 font-roboto text-[#2D2926] px-5">
-        <section className="flex items-end h-[95dvh]">
-          <h2 className="flex flex-wrap my-3 lg:w-[605px] text-3xl lg:text-4xl">
-            {words.map((word, i) => {
-              const isTargetPhrase = i >= 2 && i <= 6;
-              return (
-                <motion.p
-                  variants={perspective}
-                  custom={i}
-                  animate="enter"
-                  exit="exit"
-                  initial="initial"
-                  key={i}
-                  className={`font-light mr-[6px] leading-tight ${
-                    isTargetPhrase
-                      ? " decoration-1 font-semibold underline-offset-4"
-                      : ""
-                  }`}
-                >
-                  {word}
-                </motion.p>
-              );
-            })}
-          </h2>
+      <main className="bg-[#ffffff] font-urbanist text-[#000000] h-[100dvh] overflow-hidden">
+        <section className="h-full flex justify-center flex-col">
+          <h3 className="font-bold lg:mx-20 mx-5">
+            HELLO I'M FREELANCE
+          </h3>
+          <h1 className="font-bold lg:text-8xl relative lg:h-[180px] h-[75px] w-full text-4xl">
+            <p className="absolute -left-8 whitespace-nowrap flex overflow-hidden">
+              {title.map((word, i) => {
+                return <motion.p 
+                variants={titles}
+                custom={i}
+                animate="enter"
+                exit="exit"
+                initial="initial"
+                className=""
+                key={i}>{word}</motion.p>
+              })}
+            </p>
+            <p className="absolute whitespace-nowrap bottom-0 flex -right-10 overflow-hidden">
+            {title2.map((word, i) => {
+                return <motion.p 
+                variants={titles}
+                custom={i}
+                animate="enter"
+                exit="exit"
+                initial="initial"
+                className=""
+                key={i}
+                >{word}</motion.p>
+              })}
+            </p>
+          </h1>
         </section>
-        <section className="flex flex-col gap-3 lg:gap-4 lg:flex-row lg:flex-wrap">
-          {works.map((work, i) => {
-            return (
-              <motion.div
-                variants={perspective}
-                  custom={i+5}
-                  animate="enter"
-                  exit="exit"
-                  initial="initial"
-                  key={i}
-                className="flex justify-center rounded-lg relative h-[260px] lg:w-[49%] lg:h-[450px]"
-                style={{ backgroundColor: work.color }}
-              >
-                <Link
-                  to={`/work/${work.title}`}
-                  className="flex w-full flex-row-reverse items-center"
-                >
-                  <div className="w-[40%] lg:w-[38%] h-[95%] lg:h-[90%] py-3 z-[5] mx-5">
-                    <img
-                      src={`/images/${work.img.one}`}
-                      alt={work.title}
-                      className="w-full h-full"
-                    />
-                  </div>
-                  <div className="absolute top-0 left-0 m-2 lg:m-3">
-                    <p className="font-extrabold text-neutral-100 leading-none text-5xl lg:text-6xl">
-                      {work.title.toUpperCase()}
-                    </p>
-                  </div>
-                </Link>
-              </motion.div>
-            );
-          })}
-        </section>
+        {works.map((work, i) => {
+          const styles = {
+            top: work.top.desktop,
+            right: work.rigth.desktop,
+          };
+        
+          if (isMobile) {
+            styles.top = work.top.phone;
+            styles.right = work.rigth.phone;
+          }
+          return <motion.div
+            variants={perspective}
+            custom={i}
+            animate="enter"
+            exit="exit"
+            initial="initial"
+            key={i}
+            className='absolute' 
+            style={styles}
+            >
+            <Link to={`/work/${work.title}`} className="">
+              <div className="bg-slate-400 w-[310px] overflow-hidden h-[180px] relative">
+                <img src={`/images/${work.main}`} alt="" className="p-1 absolute"/>
+              </div>
+            </Link>
+          </motion.div>
+        })}
       </main>
       <Footer></Footer>
     </Inner>

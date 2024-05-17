@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      'roboto': ['Roboto', 'sans-serif']
+      'urbanist': ['Urbanist', 'sans-serif']
     }
   },
   plugins: [],
