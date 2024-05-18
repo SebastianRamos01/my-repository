@@ -1,6 +1,7 @@
 import React from "react";
 
 const ig = "https://www.instagram.com/_sbaramos"
+const linkedin = "https://www.linkedin.com/in/sebastian-matias-ramos"
 
 export default function Footer() {
   return (
@@ -8,6 +9,9 @@ export default function Footer() {
       <div className="flex justify-between items-center w-full h-10">
         <a href={ig}>
           <p className="underline decoration-1 underline-offset-4">INSTAGRAM</p>
+        </a>
+        <a href={linkedin}>
+          <p className="underline decoration-1 underline-offset-4">LINKEDIN</p>
         </a>
       </div>
     </footer>

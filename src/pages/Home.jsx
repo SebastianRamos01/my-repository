@@ -9,16 +9,18 @@ import { useMediaQuery } from "react-responsive";
 const perspective = {
   initial: {
     opacity: 0,
+    scale: 0.7
   },
   enter: (i) => ({
     opacity: 1,
+    scale: 1,
     transition: {
-      delay: 0.5 + i * 0.1,
-      ease: [0.7, 0, 0.84, 0]
+      delay: 0.5 + i * 0.5,
     },
   }),
   exit: {
     opacity: 0,
+    scale: 0.4,
   },
 };
 
@@ -29,7 +31,9 @@ const titles = {
   enter: (i) => ({
     y: 0,
     transition: {
-      delay: 0.1 + i * 0.1,
+      delay: 0.3 + i * 0.1,
+      ease: [0.76, 0, 0.24, 1],
+      duration: 0.5
     },
   }),
   exit: {
@@ -53,31 +57,37 @@ export default function Home() {
             HELLO I'M FREELANCE
           </h3>
           <h1 className="font-bold lg:text-8xl relative lg:h-[180px] h-[75px] w-full text-4xl">
-            <p className="absolute -left-8 whitespace-nowrap flex overflow-hidden">
-              {title.map((word, i) => {
+            <span className="absolute -left-3 md:left-1 lg:left-5 whitespace-nowrap flex overflow-hidden">
+              {title.map((letter, i) => {
+                const hasSpace = letter === ' ';
+                const className = hasSpace ? 'mr-2 lg:mr-4' : '';
+                
                 return <motion.p 
                 variants={titles}
                 custom={i}
                 animate="enter"
                 exit="exit"
                 initial="initial"
-                className=""
-                key={i}>{word}</motion.p>
+                className={className}
+                key={i}>{letter}</motion.p>
               })}
-            </p>
-            <p className="absolute whitespace-nowrap bottom-0 flex -right-10 overflow-hidden">
-            {title2.map((word, i) => {
+            </span>
+            <span className="absolute whitespace-nowrap bottom-0 flex right-1 lg:right-5 overflow-hidden">
+            {title2.map((letter, i) => {
+                const hasSpace = letter === ' ';
+                const className = hasSpace ? 'mr-2 lg:mr-4' : '';
+
                 return <motion.p 
                 variants={titles}
                 custom={i}
                 animate="enter"
                 exit="exit"
                 initial="initial"
-                className=""
+                className={className}
                 key={i}
-                >{word}</motion.p>
+                >{letter}</motion.p>
               })}
-            </p>
+            </span>
           </h1>
         </section>
         {works.map((work, i) => {
@@ -101,7 +111,7 @@ export default function Home() {
             style={styles}
             >
             <Link to={`/work/${work.title}`} className="">
-              <div className="bg-slate-400 w-[310px] overflow-hidden h-[180px] relative">
+              <div className="bg-[#efefef] w-[310px] overflow-hidden h-[180px] relative">
                 <img src={`/images/${work.main}`} alt="" className="p-1 absolute"/>
               </div>
             </Link>
