@@ -51,12 +51,12 @@ export default function Single() {
               className="absolute bottom-0"
             />
           </div>
-          <motion.div variants={bg} className="absolute rounded bg-white h-full w-full bottom-0 left-0"></motion.div>
+          <motion.div variants={bg} className="absolute rounded bg-[#2D2926] h-full w-full bottom-0 left-0"></motion.div>
         </div>
         <div className="lg:my-10">
           <p className="text-4xl">{work.header.toUpperCase()}</p>
         </div>
-        <div className="bg-[#2D2926] p-2 lg:p-4 flex flex-col gap-2 lg:gap-4 items-center justify-between my-3 rounded">
+        <div className="bg-[#2D2926] p-2 lg:p-4 flex flex-col gap-2 lg:gap-4 items-center justify-between my-3 rounded relative">
           <div className="h-[200px] md:h-[350px] lg:h-[800px] overflow-hidden">
             <img src={`/images/${work.main}`} alt={work.title} className="" />
           </div>
@@ -70,6 +70,7 @@ export default function Single() {
               className="absolute"
             />
           </div>
+          <motion.div variants={bg} className="absolute rounded bg-[#2D2926] h-full w-full bottom-0 left-0"></motion.div>
         </div>
         <div className="py-2">
           <p className="font-bold">PROJECT CONTRIBUTION</p>

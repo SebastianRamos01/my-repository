@@ -8,11 +8,11 @@ export const works = [
         main: 'desktop-nailstore.png',
         secondary: 'mockup-nailstore-phone.png',
         top: {
-            phone: "13%",
+            phone: "14%",
             desktop: "5%"
         },
         rigth: {
-            phone: "23%",
+            phone: "18%",
             desktop: "55%"
         },
     },

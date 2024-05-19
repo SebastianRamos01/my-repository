@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
-    <div className='font-urbanist font-medium absolute flex w-full justify-between text-sm p-5'>
+    <div className='font-urbanist font-medium absolute flex w-full justify-between text-xs p-5'>
       <div className='underline decoration-1 underline-offset-4'>
         <Link to={'/'} className=''>
           SEBASTIAN<br />

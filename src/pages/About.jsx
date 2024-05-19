@@ -24,16 +24,20 @@ export default function About() {
     <Inner>
       <Header></Header>
       <section className="font-urbanist text-[#2D2926] font-light pt-24">
-        <div className="m-5 relative w-fit">
+        <div className="mx-5 my-2 relative w-fit">
           <p className="font-bold text-4xl lg:text-6xl">HELLO IT'S ME</p>
           <motion.div variants={bg} className="bg-[#2D2926] absolute top-0 h-full w-full right-0">
           </motion.div>
         </div>
         <div className="px-5 flex flex-col lg:flex-row-reverse w-full">
-          <div className="bg-slate-200 lg:w-[40%]">
-            <img src="/images/photo.jpg" alt="photo" className="p-1" />
+          <div className="lg:w-[40%] relative">
+            <div className="bg-[#2d2926]">
+              <img src="/images/photo.jpg" alt="photo" className="p-4"/>
+            </div>
+            <motion.div variants={bg} className="bg-[#2d2926] absolute top-0 h-full w-full left-0">
+          </motion.div>
           </div>
-          <div className="lg:w-[60%]">
+          <div className="lg:w-[60%] my-2 lg:my-0">
             <div className="">
               <p className="">
                 I am a Full-Stack Web Developer with a strong inclination
