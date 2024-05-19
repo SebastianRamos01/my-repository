@@ -51,7 +51,7 @@ export default function Home() {
   return (
     <Inner>
       <Header></Header>
-      <main className="bg-[#ffffff] font-urbanist text-[#000000] h-[100dvh] overflow-hidden">
+      <main className="font-urbanist text-[#2d2926] h-[100dvh] overflow-hidden">
         <section className="h-full flex justify-center flex-col">
           <h3 className="font-bold lg:mx-40 mx-5">{titles[0].toUpperCase()}</h3>
           <h1 className="font-bold lg:text-7xl relative gap-1 w-full text-3xl flex flex-col px-5 lg:px-20">
@@ -59,14 +59,14 @@ export default function Home() {
               <p>{titles[1].toUpperCase()}</p>
               <motion.div
                 variants={bg}
-                className="bg-[#2D2926] absolute top-0 h-full w-full right-0"
+                className="bg-[#2D2926] absolute top-0 h-full w-full right-0 rounded"
               ></motion.div>
             </span>
             <span className="whitespace-nowrap flex overflow-hidden relative w-fit self-end">
               <p>{titles[2].toUpperCase()}</p>
               <motion.div
                 variants={bg}
-                className="bg-[#2D2926] absolute top-0 h-full w-full"
+                className="bg-[#2D2926] absolute top-0 h-full w-full rounded"
               ></motion.div>
             </span>
           </h1>
@@ -92,7 +92,7 @@ export default function Home() {
               className="absolute"
               style={styles}
             >
-              <Link to={`/work/${work.title}`} className="h-fit flex p-1 bg-[#2D2926]">
+              <Link to={`/work/${work.title}`} className="h-fit flex p-1" style={{backgroundColor: work.color}}>
                 <div className="w-[280px] overflow-hidden h-[160px]">
                   <motion.img
                     src={`/images/${work.main}`}

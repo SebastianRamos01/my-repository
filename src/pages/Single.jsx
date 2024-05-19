@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import Inner from "../components/Inner";
 import { works } from "../data/data";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 
 const bg = {
@@ -25,19 +24,18 @@ export default function Single() {
   const { title } = useParams();
 
   const work = works.find((e) => e.title === title);
-  const image = work.phone;
 
   return (
     <Inner>
       <Header></Header>
-      <section className="font-urbanist text-[#2D2926] px-5 py-20">
+      <section className="font-urbanist text-[#2D2926] px-5 py-20" style={{backgroundColor: work.color}}>
         <div className="my-4 relative w-fit">
           <p className="text-4xl font-bold lg:text-6xl">
             {work.title.toUpperCase()}
           </p>
           <motion.div
             variants={bg}
-            className="bg-[#2D2926] absolute top-0 h-full w-full right-0"
+            className="bg-[#2D2926] absolute top-0 h-full w-full right-0 rounded"
           ></motion.div>
         </div>
         <div className="bg-[#2D2926] p-2 lg:p-4 flex justify-between mb-3 rounded relative">
@@ -72,16 +70,18 @@ export default function Single() {
           </div>
           <motion.div variants={bg} className="absolute rounded bg-[#2D2926] h-full w-full bottom-0 left-0"></motion.div>
         </div>
-        <div className="py-2">
-          <p className="font-bold">PROJECT CONTRIBUTION</p>
-          <p className="">{work.rol}</p>
-        </div>
-        <div className="py-2">
-          <p className="font-bold">PROJECT OVERVIEW</p>
-          <p className="">{work.description}</p>
+        <div className="text-xl">
+          <div className="py-2">
+            <p className="font-bold">PROJECT CONTRIBUTION</p>
+            <p className="">{work.rol}</p>
+          </div>
+          <div className="py-2">
+            <p className="font-bold">PROJECT OVERVIEW</p>
+            <p className="">{work.description}</p>
+          </div>
         </div>
         <div className="bg-[#2D2926] p-2 lg:p-4 flex justify-between my-2 rounded">
-          <div className="w-[60%] lg:w-[78%]">
+          <div className="w-[62%] lg:w-[78%]">
             <img src={`/images/${work.main}`} alt={work.title} className="" />
           </div>
           <div className="w-[35%] lg:w-[20%]">
