@@ -1,6 +1,6 @@
-import React from "react";
 import Inner from "../components/Inner";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 
 const bg = {
@@ -29,25 +29,26 @@ export default function About() {
           <motion.div variants={bg} className="bg-[#2D2926] absolute top-0 h-full w-full right-0 rounded">
           </motion.div>
         </div>
-        <div className="px-5 flex flex-col lg:flex-row-reverse w-full">
-          <div className="lg:w-[40%] relative">
-            <div className="bg-[#2d2926]">
+        <div className="px-5 flex flex-col lg:flex-row w-full">
+          <div className="relative lg:w-1/2">
+            <div className="bg-[#efefef]">
               <img src="/images/photo.jpg" alt="photo" className="p-4"/>
             </div>
             <motion.div variants={bg} className="bg-[#2d2926] absolute top-0 h-full w-full left-0 rounded">
           </motion.div>
           </div>
-          <div className="lg:w-[60%] my-2 lg:my-0 lg:pr-4">
+          <div className="lg:w-[60%] my-2 lg:my-0 lg:px-4">
             <div className="">
-              <p className="">
+              <p className="font-bold my-1">
                 I am a Full-Stack Web Developer with a strong inclination
                 towards front-end development and web design, constantly
-                improving my development and design skills. Currently, I work as
-                a freelancer dedicated to helping my clients achieve their goals
-                in web development. Committed to offering the best product
-                quality. I am open to the opportunity to collaborate and devise
-                innovative solutions.
+                improving my development and design skills.
               </p>
+              <p className="my-1">  
+                Currently, i work as a freelancer dedicated to helping my clients achieve their goals
+                in web development. Committed to offering the best product
+                quality.
+              </p>   
             </div>
             <div className="mt-5 font-bold">THIS ARE SOME OF MY SKILLS IN</div>
             <div className="flex gap-5 mt-1">
@@ -110,24 +111,14 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="px-5 py-3">
+        <div className="px-5 py-2">
           <div className="flex flex-col">
-            <p className="font-bold">HAVE AN IDEA</p>
-            <p className="font-bold text-4xl lg:text-6xl">LETS TALK</p>
-            <a
-              href="https://www.instagram.com/_sbaramos"
-              className="underline font-medium"
-            >
-              INSTAGRAM
-            </a>
-            <a
-              href="mailto:sebasm.sr@gmail.com"
-              className="underline font-medium"
-            >
-              EMAIL
-            </a>
+            <p className="font-bold">I am open to the opportunity to collaborate and devise
+                innovative solutions.</p>
+            <p className="font-bold text-xl lg:text-4xl">LETS TALK</p>
           </div>
         </div>
+        <Footer></Footer>
       </section>
     </Inner>
   );

@@ -3,6 +3,7 @@ import Inner from "../components/Inner";
 import { works } from "../data/data";
 import Header from "../components/Header";
 import { motion } from "framer-motion";
+import Footer from "../components/Footer";
 
 const bg = {
   initial: {
@@ -28,7 +29,7 @@ export default function Single() {
   return (
     <Inner>
       <Header></Header>
-      <section className="font-urbanist text-[#2D2926] px-5 py-20" style={{backgroundColor: work.color}}>
+      <section className="font-urbanist text-[#2D2926] px-5 pt-20">
         <div className="my-4 relative w-fit">
           <p className="text-4xl font-bold lg:text-6xl">
             {work.title.toUpperCase()}
@@ -38,39 +39,26 @@ export default function Single() {
             className="bg-[#2D2926] absolute top-0 h-full w-full right-0 rounded"
           ></motion.div>
         </div>
-        <div className="bg-[#2D2926] p-2 lg:p-4 flex justify-between mb-3 rounded relative">
-          <div className="w-[49%] h-[200px] overflow-hidden lg:h-[800px] md:h-[350px]">
+        <div className="bg-[#efefef] p-5 lg:p-10 flex justify-between rounded relative">
+          <div className="h-[200px] overflow-hidden lg:h-[800px] md:h-[350px] border-[#1c140d] border-8 rounded">
             <img src={`/images/${work.main}`} alt={work.title} className="" />
-          </div>
-          <div className="w-[49%] h-[200px] overflow-hidden relative lg:h-[800px] md:h-[350px]">
-            <img
-              src={`/images/${work.main}`}
-              alt={work.title}
-              className="absolute bottom-0"
-            />
           </div>
           <motion.div variants={bg} className="absolute rounded bg-[#2D2926] h-full w-full bottom-0 left-0"></motion.div>
         </div>
-        <div className="lg:my-10">
+        <div className="my-10">
           <p className="text-4xl">{work.header.toUpperCase()}</p>
         </div>
-        <div className="bg-[#2D2926] p-2 lg:p-4 flex flex-col gap-2 lg:gap-4 items-center justify-between my-3 rounded relative">
-          <div className="h-[200px] md:h-[350px] lg:h-[800px] overflow-hidden">
-            <img src={`/images/${work.main}`} alt={work.title} className="" />
-          </div>
-          <div className="w-[80%] h-[160px] md:h-[300px] lg:h-[500px] overflow-hidden">
-            <img src={`/images/${work.main}`} alt={work.title} className="" />
-          </div>
-          <div className="w-[32%] h-[200px] lg:h-[700px] overflow-hidden relative">
+        <div className="bg-[#efefef] p-5 lg:p-10 rounded relative flex justify-center">
+          <div className="h-[210px] w-80 lg:h-[550px] overflow-hidden relative border-[#1c140d] border-4 rounded">
             <img
               src={`/images/${work.secondary}`}
               alt={work.title}
               className="absolute"
             />
           </div>
-          <motion.div variants={bg} className="absolute rounded bg-[#2D2926] h-full w-full bottom-0 left-0"></motion.div>
+          <motion.div variants={bg} className="absolute rounded bg-[#1c140d] h-full w-full bottom-0 left-0"></motion.div>
         </div>
-        <div className="text-xl">
+        <div className="my-10">
           <div className="py-2">
             <p className="font-bold">PROJECT CONTRIBUTION</p>
             <p className="">{work.rol}</p>
@@ -80,19 +68,22 @@ export default function Single() {
             <p className="">{work.description}</p>
           </div>
         </div>
-        <div className="bg-[#2D2926] p-2 lg:p-4 flex justify-between my-2 rounded">
-          <div className="w-[62%] lg:w-[78%]">
+        <div className="bg-[#efefef] p-5 lg:p-10 flex justify-between my-2 rounded">
+          <div className="border-[#1c140d] border-8 rounded">
             <img src={`/images/${work.main}`} alt={work.title} className="" />
           </div>
-          <div className="w-[35%] lg:w-[20%]">
+        </div>
+        <div className="bg-[#efefef] p-5 lg:p-10 flex justify-center my-2 rounded">
+          <div className="border-[#1c140d] border-4 rounded-lg">
             <img
               src={`/images/${work.secondary}`}
               alt={work.title}
-              className=""
+              className="rounded-lg"
             />
           </div>
         </div>
       </section>
+      <Footer></Footer>
     </Inner>
   );
 }

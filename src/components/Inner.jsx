@@ -42,7 +42,7 @@ export default function Inner({children}) {
 
   return (
     <div className=''>
-        <motion.div {...anim(slide)} className='fixed top-0 left-0 bg-[#2d2926] w-screen h-screen z-10'><p className='text-[#F4F4F2] font-roboto font-extralight'>Hello World</p></motion.div>
+        <motion.div {...anim(slide)} className='fixed top-0 left-0 bg-[#2d2926] w-screen h-screen z-20'><p className='text-[#F4F4F2] font-roboto font-extralight'>Hello World</p></motion.div>
         <motion.div {...anim(opacity)} className=''>
             {children}
         </motion.div>
