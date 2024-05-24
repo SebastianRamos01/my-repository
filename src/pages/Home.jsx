@@ -1,9 +1,10 @@
 import Inner from "../components/Inner";
 import Header from "../components/Header";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import { works } from "../data/data";
+import { useEffect, useRef } from "react";
 
 const perspective = {
   initial: {
@@ -23,23 +24,35 @@ const perspective = {
   },
 };
 
-const bg = {
+const circle = {
   initial: {
-    width: "100%",
+    scale: 0
   },
   enter: {
-    width: "0%",
+    scale: 1,
     transition: {
       duration: 1,
       ease: [0.76, 0, 0.24, 1],
     },
   },
   exit: {
-    width: "100%",
-  },
-};
+    scale: 1
+  }
+}
 
 export default function Home() {
+
+  const elem = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: elem,
+    offset: ["start end", "end start"]
+  })
+  const scale = useTransform(scrollYProgress, [0, 1], [2, 1])
+  
+  // useEffect(() => {
+  //   scrollYProgress.on("change", e => console.log(e))
+  // }, [])
+
   const titles = [
     "hello i'm freelance",
     "front end developer",
@@ -49,23 +62,20 @@ export default function Home() {
   return (
     <Inner>
       <Header></Header>
-      <main className="font-urbanist text-[#1c140d]">
-        <section className="flex justify-center flex-col h-[95dvh]">
-          <h3 className="font-bold lg:mx-40 mx-5">{titles[0].toUpperCase()}</h3>
+      <main className="font-urbanist text-[#1c140d] overflow-hidden" >
+        <section className="flex justify-center flex-col h-[95dvh] text-white relative" ref={elem}>
+          <motion.div 
+            enter={{scale}}
+            style={{ scale }}
+            className="bg-[#1c140d] rounded-full w-[35rem] h-[35rem] absolute -top-5 -left-16">
+          </motion.div>
+          <h3 className="font-bold z-10 lg:mx-40 mx-5">{titles[0].toUpperCase()}</h3>
           <h1 className="font-bold lg:text-7xl relative gap-1 w-full text-3xl flex flex-col px-5 lg:px-20">
             <span className="whitespace-nowrap flex overflow-hidden relative w-fit">
               <p>{titles[1].toUpperCase()}</p>
-              <motion.div
-                variants={bg}
-                className="bg-[#1c140d] absolute top-0 h-full w-full right-0 rounded"
-              ></motion.div>
             </span>
             <span className="whitespace-nowrap flex overflow-hidden relative w-fit self-end">
               <p>{titles[2].toUpperCase()}</p>
-              <motion.div
-                variants={bg}
-                className="bg-[#1c140d] absolute top-0 h-full w-full rounded"
-              ></motion.div>
             </span>
           </h1>
         </section>
@@ -79,7 +89,7 @@ export default function Home() {
                 exit="exit"
                 initial="initial"
                 key={i}
-                className="rounded-lg bg-[#efefef]"
+                className="rounded-lg bg-[#efefef] z-10"
               >
                 <Link to={`/work/${work.title}`} className="h-fit flex p-5 lg:p-10 py-16 rounded-lg flex-col">
                   <div className="overflow-hidden h-[200px] lg:h-[450px] border-[#1c140d] border-8 rounded">

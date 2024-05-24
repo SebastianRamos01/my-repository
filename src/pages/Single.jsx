@@ -49,7 +49,7 @@ export default function Single() {
           <p className="text-4xl">{work.header.toUpperCase()}</p>
         </div>
         <div className="bg-[#efefef] p-5 lg:p-10 rounded relative flex justify-center">
-          <div className="h-[210px] w-80 lg:h-[550px] overflow-hidden relative border-[#1c140d] border-4 rounded">
+          <div className="h-[510px] w-80 lg:h-[550px] overflow-hidden relative border-[#1c140d] border-4 rounded">
             <img
               src={`/images/${work.secondary}`}
               alt={work.title}
