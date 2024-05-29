@@ -53,7 +53,7 @@ export default function Home() {
       <Header></Header>
       <main className="font-urbanist text-[#1c140d]" >
         <section className="h-[95dvh] bg-gradient-to-br from-blue-50 via-indigo-200 to-violet-50" ref={elem}>
-            <div className="flex flex-col h-full justify-center gap-12 lg:gap-16 mx-5 lg:mx-28">
+            <div className="flex flex-col h-full justify-center gap-28 mx-5 lg:mx-28">
               <div className="">
                 <h3 className="">{titles[0]}</h3>
                 <h1 className="w-fit text-2xl lg:text-3xl h-12 lg:h-[58px]">
@@ -70,14 +70,14 @@ export default function Home() {
               </div>
             </div>
         </section>
-        <section className="text-[#1c140d] my-10 lg:mx-10 mx-5">
+        <section className="text-[#1c140d] my-10 lg:mx-32 mx-5">
           <p className="lg:text-2xl font-semibold w-72">
             Currently working as a freelancer dedicated to helping my clients achieve their goals
-            in web development. Committed to offering the best product
+            in web development and offering the best product
             quality.
           </p>
         </section>
-        <section className="flex flex-col mx-5 lg:mx-10 gap-4">
+        <section className="flex flex-col mx-5 lg:mx-32 gap-4">
           {works.map((work, i) => {
             return (
               <motion.div
@@ -90,7 +90,7 @@ export default function Home() {
                 className="rounded-lg bg-[#efefef] z-10"
               >
                 <Link to={`/work/${work.title}`} className="h-fit flex p-5 lg:p-16 lg:my-4 my-16 rounded-lg flex-col">
-                  <div className="overflow-hidden h-[200px] lg:h-[500px] border-[#1c140d] border-8 rounded">
+                  <div className="overflow-hidden h-[200px] lg:h-[430px] border-[#1c140d] border-8 rounded">
                     <motion.img
                       src={`/images/${work.main}`}
                       alt=""

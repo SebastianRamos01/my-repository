@@ -29,7 +29,7 @@ export default function Single() {
   return (
     <Inner>
       <Header></Header>
-      <section className="font-urbanist text-[#2D2926] px-5 pt-20">
+      <section className="font-urbanist text-[#2D2926] px-32 pt-20">
         <div className="my-4 relative w-fit">
           <p className="text-4xl font-bold lg:text-6xl">
             {work.title.toUpperCase()}
@@ -40,7 +40,7 @@ export default function Single() {
           ></motion.div>
         </div>
         <div className="bg-[#efefef] p-5 lg:p-10 flex justify-between rounded relative">
-          <div className="h-[200px] overflow-hidden lg:h-[800px] md:h-[350px] border-[#1c140d] border-8 rounded">
+          <div className="h-[200px] overflow-hidden lg:h-[450px] md:h-[350px] border-[#1c140d] border-8 rounded">
             <img src={`/images/${work.main}`} alt={work.title} className="" />
           </div>
           <motion.div variants={bg} className="absolute rounded bg-[#2D2926] h-full w-full bottom-0 left-0"></motion.div>
