@@ -24,22 +24,6 @@ const perspective = {
   },
 };
 
-const circle = {
-  initial: {
-    scale: 0
-  },
-  enter: {
-    scale: 1,
-    transition: {
-      duration: 1,
-      ease: [0.76, 0, 0.24, 1],
-    },
-  },
-  exit: {
-    scale: 1
-  }
-}
-
 export default function Home() {
 
   const elem = useRef(null)
@@ -54,32 +38,46 @@ export default function Home() {
   // }, [])
 
   const titles = [
-    "hello i'm freelance",
-    "front end developer",
+    "Freelance",
+    "Front end developer",
+    "& Web designer",
+  ];
+  const secondaryTitles = [
+    "Based in",
+    "Buenos Aires, Arg",
     "& web designer",
   ];
 
   return (
     <Inner>
       <Header></Header>
-      <main className="font-urbanist text-[#1c140d] overflow-hidden" >
-        <section className="flex justify-center flex-col h-[95dvh] text-white relative" ref={elem}>
-          <motion.div 
-            enter={{scale}}
-            style={{ scale }}
-            className="bg-[#1c140d] rounded-full w-[35rem] h-[35rem] absolute -top-5 -left-16">
-          </motion.div>
-          <h3 className="font-bold z-10 lg:mx-40 mx-5">{titles[0].toUpperCase()}</h3>
-          <h1 className="font-bold lg:text-7xl relative gap-1 w-full text-3xl flex flex-col px-5 lg:px-20">
-            <span className="whitespace-nowrap flex overflow-hidden relative w-fit">
-              <p>{titles[1].toUpperCase()}</p>
-            </span>
-            <span className="whitespace-nowrap flex overflow-hidden relative w-fit self-end">
-              <p>{titles[2].toUpperCase()}</p>
-            </span>
-          </h1>
+      <main className="font-urbanist text-[#1c140d]" >
+        <section className="h-[95dvh] bg-gradient-to-br from-blue-50 via-indigo-200 to-violet-50" ref={elem}>
+            <div className="flex flex-col h-full justify-center gap-12 lg:gap-16 mx-5 lg:mx-28">
+              <div className="">
+                <h3 className="">{titles[0]}</h3>
+                <h1 className="w-fit text-2xl lg:text-3xl h-12 lg:h-[58px]">
+                    <p>{titles[1]}</p>
+                    <p className="w-full text-right">{titles[2]}</p>
+                </h1>
+              </div>
+              <div className="flex flex-col items-end">
+                <h3 className="text-right">{secondaryTitles[0]}</h3>
+                <h1 className="text-2xl lg:text-3xl h-[70px]">
+                    <p>{secondaryTitles[1]}</p>
+                    <a className="underline text-left w-full decoration-1 underline-offset-4" href="mailto:sebasm.sr@gmail.com">Get in touch</a>
+                </h1>
+              </div>
+            </div>
         </section>
-        <section className="flex flex-col mx-5 gap-2">
+        <section className="text-[#1c140d] my-10 lg:mx-10 mx-5">
+          <p className="lg:text-2xl font-semibold w-72">
+            Currently working as a freelancer dedicated to helping my clients achieve their goals
+            in web development. Committed to offering the best product
+            quality.
+          </p>
+        </section>
+        <section className="flex flex-col mx-5 lg:mx-10 gap-4">
           {works.map((work, i) => {
             return (
               <motion.div
@@ -91,8 +89,8 @@ export default function Home() {
                 key={i}
                 className="rounded-lg bg-[#efefef] z-10"
               >
-                <Link to={`/work/${work.title}`} className="h-fit flex p-5 lg:p-10 py-16 rounded-lg flex-col">
-                  <div className="overflow-hidden h-[200px] lg:h-[450px] border-[#1c140d] border-8 rounded">
+                <Link to={`/work/${work.title}`} className="h-fit flex p-5 lg:p-16 lg:my-4 my-16 rounded-lg flex-col">
+                  <div className="overflow-hidden h-[200px] lg:h-[500px] border-[#1c140d] border-8 rounded">
                     <motion.img
                       src={`/images/${work.main}`}
                       alt=""
