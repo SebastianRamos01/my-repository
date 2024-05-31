@@ -37,47 +37,41 @@ export default function Home() {
   //   scrollYProgress.on("change", e => console.log(e))
   // }, [])
 
+  const text = "Currently working as a freelancer dedicated to helping my clients achieve their goals in web development."
   const titles = [
     "Freelance",
     "Front end developer",
     "& Web designer",
-  ];
-  const secondaryTitles = [
     "Based in",
     "Buenos Aires, Arg",
-    "& web designer",
+    "Lets Talk Here",
   ];
 
   return (
     <Inner>
-      <Header></Header>
-      <main className="font-urbanist text-[#1c140d]" >
-        <section className="h-[95dvh] bg-gradient-to-br from-blue-50 via-indigo-200 to-violet-50" ref={elem}>
-            <div className="flex flex-col h-full justify-center gap-28 mx-5 lg:mx-28">
-              <div className="">
-                <h3 className="">{titles[0]}</h3>
-                <h1 className="w-fit text-2xl lg:text-3xl h-12 lg:h-[58px]">
-                    <p>{titles[1]}</p>
-                    <p className="w-full text-right">{titles[2]}</p>
-                </h1>
-              </div>
-              <div className="flex flex-col items-end">
-                <h3 className="text-right">{secondaryTitles[0]}</h3>
-                <h1 className="text-2xl lg:text-3xl h-[70px]">
-                    <p>{secondaryTitles[1]}</p>
-                    <a className="underline text-left w-full decoration-1 underline-offset-4" href="mailto:sebasm.sr@gmail.com">Get in touch</a>
-                </h1>
-              </div>
+      <main className="font-urbanist text-[#1c140d]">
+        <Header></Header>
+        <section className="flex flex-col md:flex-row md:h-[100dvh]">
+          <div className="h-full md:min-w-[378px]">
+            <img src="/images/photo.jpg" alt="" className="h-full w-full"/>
+          </div>
+          <div className="flex flex-col md:justify-between m-5 md:m-10 gap-14">
+            <div>
+              <p className="">{titles[0]}</p>
+              <p className="text-2xl font-semibold">{titles[1]}</p>
+              <p className="text-2xl font-semibold">{titles[2]}</p>
             </div>
+            <div className="w-1/2 mx-auto text-center">
+              <p className="text-xl">{text}</p>
+            </div>
+            <div className="text-right">
+              <p >{titles[3]}</p>
+              <p className="text-2xl font-semibold">{titles[4]}</p>
+              <p className="text-2xl font-semibold">{titles[5]}</p>
+            </div>
+          </div>
         </section>
-        <section className="text-[#1c140d] my-10 lg:mx-32 mx-5">
-          <p className="lg:text-2xl font-semibold w-72">
-            Currently working as a freelancer dedicated to helping my clients achieve their goals
-            in web development and offering the best product
-            quality.
-          </p>
-        </section>
-        <section className="flex flex-col mx-5 lg:mx-32 gap-4">
+        <section className="flex flex-col mx-5 py-20 gap-10 md:flex-row border-y border-black">
           {works.map((work, i) => {
             return (
               <motion.div
@@ -87,10 +81,13 @@ export default function Home() {
                 exit="exit"
                 initial="initial"
                 key={i}
-                className="rounded-lg bg-[#efefef] z-10"
+                className="bg-[#2d2926] text-white p-5 flex flex-col gap-5"
               >
-                <Link to={`/work/${work.title}`} className="h-fit flex p-5 lg:p-16 lg:my-4 my-16 rounded-lg flex-col">
-                  <div className="overflow-hidden h-[200px] lg:h-[430px] border-[#1c140d] border-8 rounded">
+                <p>
+                  {`#${i + 1}`}
+                </p>
+                <Link to={`/work/${work.title}`} className="">
+                  <div className="overflow-hidden h-[200px] lg:h-[430px]">
                     <motion.img
                       src={`/images/${work.main}`}
                       alt=""
@@ -101,18 +98,30 @@ export default function Home() {
                       }}
                       />
                   </div>
-                  <div className="my-5">
-                      <div className="font-bold">
-                        {work.title.toUpperCase()}
-                      </div>
-                      <span>
-                        {work.rol}
-                      </span>
-                  </div>
                 </Link>
+                <p className="">                      
+                  {work.rol}
+                </p>
               </motion.div>
             );
           })}
+        </section>
+        <section className="mx-5 py-10">
+          <p className="my-5 md:text-center font-semibold text-2xl">I can help you whit</p>
+          <div className="flex flex-col md:flex-row gap-5 text-lg">
+            <div>
+              <p className="font-medium text-xl">Design</p>
+              <p>Currently working as a freelancer dedicated to helping my clients achieve their goals in web development.</p>
+            </div>
+            <div>
+              <p className="font-medium text-xl">Develop</p>
+              <p>Currently working as a freelancer dedicated to helping my clients achieve their goals in web development.</p>
+            </div>
+            <div>
+              <p className="font-medium text-xl">Full Web</p>
+              <p>Currently working as a freelancer dedicated to helping my clients achieve their goals in web development.</p>
+            </div>
+          </div>
         </section>
         <Footer></Footer>
       </main>
