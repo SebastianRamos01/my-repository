@@ -5,7 +5,7 @@ const linkedin = "https://www.linkedin.com/in/sebastian-matias-ramos"
 
 export default function Footer() {
   return (
-    <footer className="font-urbanist w-full p-5 text-white">
+    <footer className="font-urbanist w-full px-5 md:px-10 text-white">
       <div className="flex flex-col gap-5 bg-[#2d2926] p-5">
         <div>
           <p>Currently Available</p>
@@ -26,7 +26,7 @@ export default function Footer() {
           </a>
         </ul>
       </div>
-      <p className="text-black my-2">Code by Me@</p>
+      <p className="text-black my-1">Code by Me@</p>
     </footer>
   );
 }
