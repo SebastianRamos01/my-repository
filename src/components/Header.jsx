@@ -60,10 +60,10 @@ export default function Header() {
             </Link>
           </div>
           {isOpen && <DisplayNav />}
-          <ul className="bg-[#2d2926] rounded-2xl h-8 text-center lg:flex items-center px-5 hidden">
+          <ul className="bg-[#2d2926] rounded-2xl h-8 text-center lg:flex items-center px-2 gap-1 hidden">
             {navLinks.map((elem, i) => {
               return (
-                <Link key={i} to={elem.to} className="px-4">
+                <Link key={i} to={elem.to} className="px-4 hover:bg-white rounded-lg hover:text-[#2d2926]">
                   {elem.name}
                 </Link>
               );

@@ -29,22 +29,22 @@ export default function Single() {
   return (
     <Inner>
       <Header></Header>
-      <section className="font-urbanist text-[#2D2926] px-5 py-14">
+      <section className="font-urbanist text-[#2D2926] mx-5 md:mx-10 py-14">
         <div className="my-4 w-fit">
           <p className="text-2xl font-bold">
             {work.title}
           </p>
         </div>
-        <div className="bg-[#efefef] p-5 lg:p-10 flex justify-between rounded relative">
-          <div className="h-[200px] overflow-hidden lg:h-[450px] md:h-[350px] border-[#1c140d] border-8 rounded">
+        <div className="bg-[#2d2926] p-5 lg:p-10 flex justify-between rounded relative">
+          <div className="h-[200px] overflow-hidden lg:h-[480px] md:h-[350px]">
             <img src={`/images/${work.main}`} alt={work.title} className="" />
           </div>
         </div>
         <div className="my-10">
           <p className="text-xl">{work.header}</p>
         </div>
-        <div className="bg-[#efefef] p-5 lg:p-10 rounded relative flex justify-center">
-          <div className="h-[510px] w-80 lg:h-[550px] overflow-hidden relative border-[#1c140d] border-4 rounded">
+        <div className="bg-[#2d2926] p-5 lg:p-10 rounded relative flex justify-center">
+          <div className="h-[510px] w-80 lg:h-[550px] overflow-hidden relative">
             <img
               src={`/images/${work.secondary}`}
               alt={work.title}
@@ -62,13 +62,13 @@ export default function Single() {
             <p className="">{work.description}</p>
           </div>
         </div>
-        <div className="bg-[#efefef] p-5 lg:p-10 flex justify-between my-2 rounded">
-          <div className="border-[#1c140d] border-8 rounded">
-            <img src={`/images/${work.main}`} alt={work.title} className="" />
+        <div className="bg-[#2d2926] p-5 lg:p-10 flex justify-between my-2 rounded">
+          <div className="">
+            <img src={`/images/${work.main}`} alt={work.title} className=""/>
           </div>
         </div>
-        <div className="bg-[#efefef] p-5 lg:p-10 flex justify-center my-2 rounded">
-          <div className="border-[#1c140d] border-4 rounded-lg">
+        <div className="bg-[#2d2926] p-5 lg:p-10 flex justify-center my-2 rounded">
+          <div className="">
             <img
               src={`/images/${work.secondary}`}
               alt={work.title}

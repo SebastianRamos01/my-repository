@@ -84,47 +84,49 @@ export default function Home() {
             <div className="text-right">
               <p >{titles[3]}</p>
               <p className="text-2xl font-semibold">{titles[4]}</p>
-              <p className="text-2xl font-semibold">{titles[5]}</p>
+              <Link to={"mailto:sebasm.sr@gmail.com"} className="text-2xl font-semibold underline underline-offset-4">{titles[5]}</Link>
             </div>
           </div>
         </section>
-        <section className="flex flex-col mx-5 py-20 gap-10 md:flex-row md:mx-10 border-y border-black">
-          {works.map((work, i) => {
-            return (
-              <motion.div
-                variants={perspective}
-                custom={i}
-                initial="initial"
-                animate="enter"
-                exit="exit"
-                key={i}
-                className="bg-[#2d2926] text-white p-5 flex flex-col gap-5"
-              >
-                <p>
-                  {`#${i + 1}`}
-                </p>
-                <Link to={`/work/${work.title}`} className="">
-                  <div className="overflow-hidden h-[180px] lg:h-[280px]">
-                    <motion.img
-                      src={`/images/${work.main}`}
-                      alt=""
-                      className=""
-                      whileHover={{
-                        scale: 1.1,
-                        transition: { duration: 0.5 },
-                      }}
-                      />
-                  </div>
-                </Link>
-                <p className="">                      
-                  {work.rol}
-                </p>
-              </motion.div>
-            );
-          })}
+        <section className="mx-5 py-20 md:mx-10 border-y border-black">
+          <ul className="flex flex-col justify-between md:flex-row flex-wrap gap-5">
+            {works.map((work, i) => {
+              return (
+                <motion.div
+                  variants={perspective}
+                  custom={i}
+                  initial="initial"
+                  animate="enter"
+                  exit="exit"
+                  key={i}
+                  className="bg-[#2d2926] text-white p-5 flex flex-col gap-5 lg:max-w-[620px]"
+                >
+                  <p>
+                    {`#${i + 1}`}
+                  </p>
+                  <Link to={`/work/${work.title}`} className="">
+                    <div className="overflow-hidden h-[180px] lg:h-[280px]">
+                      <motion.img
+                        src={`/images/${work.main}`}
+                        alt=""
+                        className=""
+                        whileHover={{
+                          scale: 1.1,
+                          transition: { duration: 0.5 },
+                        }}
+                        />
+                    </div>
+                  </Link>
+                  <p className="">                      
+                    {work.rol}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </ul>
         </section>
-        <section className="mx-5 py-10 md:mx-10">
-          <p className="mb-3 font-semibold text-2xl md:text-center">I can help you with</p>
+        <section className="mx-5 py-10 md:mx-28">
+          <p className="mb-5 font-semibold text-2xl md:text-center">I can help you with</p>
           <div className="flex flex-col md:flex-row gap-5 md:mx-10 md:text-center">
             <div>
               <p className="font-medium text-xl">Design</p>

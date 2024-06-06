@@ -13,6 +13,7 @@ function App() {
 
   return (
     <AnimatePresence mode="wait">
+        <ScrollToTop />
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={ <Home/> }></Route>
           <Route path="/about" element={ <About/> }></Route>
@@ -25,3 +26,12 @@ function App() {
 }
 
 export default App
+
+function ScrollToTop() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}
