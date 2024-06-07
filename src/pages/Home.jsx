@@ -1,6 +1,6 @@
 import Inner from "../components/Inner";
 import Header from "../components/Header";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { delay, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import { works } from "../data/data";
@@ -39,24 +39,34 @@ const block = {
   }
 }
 
+const titlesPerspective = {
+  initial: {
+      y: '100%',
+      opacity: 1
+    },
+    enter: (i) => ({
+      y : 0,
+      opacity: 1,
+      transition: {
+          delay: 0.3 + (i * 0.4),
+          ease: [0.76, 0, 0.24, 1],
+          duration: 1
+      }
+  }),
+  exit: {
+    y: '100%'
+  }
+}
+
 export default function Home() {
 
-  // const elem = useRef(null)
-  // const { scrollYProgress } = useScroll({
-  //   target: elem,
-  //   offset: ["start end", "end start"]
-  // })
-  // const scale = useTransform(scrollYProgress, [0, 1], [2, 1])
-  
-  // useEffect(() => {
-  //   scrollYProgress.on("change", e => console.log(e))
-  // }, [])
-
   const text = "Currently working as a freelancer dedicated to helping my clients achieve their goals in web development."
-  const titles = [
+  const topTitles = [
     "Freelance",
-    "Front end developer",
-    "& Web designer",
+    "Front end Developer",
+    "& Web designer"
+  ]
+  const botTitles = [
     "Based in",
     "Buenos Aires, Arg",
     "Lets Talk Here",
@@ -73,23 +83,46 @@ export default function Home() {
             </motion.div>
           </div>
           <div className="flex flex-col md:justify-between m-5 lg:mx-10 gap-14">
-            <div>
-              <p className="">{titles[0]}</p>
-              <p className="text-2xl font-semibold">{titles[1]}</p>
-              <p className="text-2xl font-semibold">{titles[2]}</p>
+            <div className="text-2xl overflow-hidden">
+              {topTitles.map((elem, i) => {
+                return (
+                  <div
+                    className='overflow-hidden'
+                    key={i}>
+                      <motion.p 
+                        variants={titlesPerspective} 
+                        custom={i} 
+                        className={i === 0 ? 'text-base' : 'font-semibold'}>
+                        {elem}
+                      </motion.p>
+                  </div>
+                )
+              })}
             </div>
             <div className="w-1/2 mx-auto text-center">
               <p className="text-xl">{text}</p>
             </div>
-            <div className="text-right">
-              <p >{titles[3]}</p>
-              <p className="text-2xl font-semibold">{titles[4]}</p>
-              <Link to={"mailto:sebasm.sr@gmail.com"} className="text-2xl font-semibold underline underline-offset-4">{titles[5]}</Link>
+            <div className="text-right text-2xl overflow-hidden">
+            {botTitles.map((elem, i) => {
+                return (
+                  <div
+                    key={i}
+                    className='overflow-hidden'>
+                      <motion.p 
+                        variants={titlesPerspective} 
+                        custom={i} 
+                        
+                        className={i === 0 ? 'text-base' : 'font-semibold'}>
+                        {elem}
+                      </motion.p>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </section>
         <section className="mx-5 py-20 md:mx-10 border-y border-black">
-          <ul className="flex flex-col justify-between md:flex-row flex-wrap gap-5">
+          <ul className="flex flex-col justify-between md:flex-row flex-wrap gap-4">
             {works.map((work, i) => {
               return (
                 <motion.div
@@ -99,7 +132,7 @@ export default function Home() {
                   animate="enter"
                   exit="exit"
                   key={i}
-                  className="bg-[#2d2926] text-white p-5 flex flex-col gap-5 lg:max-w-[620px]"
+                  className="bg-[#2d2926] text-white p-5 flex flex-col gap-5 lg:max-w-[49%]"
                 >
                   <p>
                     {`#${i + 1}`}
@@ -126,7 +159,7 @@ export default function Home() {
           </ul>
         </section>
         <section className="mx-5 py-10 md:mx-28">
-          <p className="mb-5 font-semibold text-2xl md:text-center">I can help you with</p>
+          <p className="mb-4 font-semibold text-2xl md:text-center">I can help you with</p>
           <div className="flex flex-col md:flex-row gap-5 md:mx-10 md:text-center">
             <div>
               <p className="font-medium text-xl">Design</p>
