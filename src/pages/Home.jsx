@@ -74,7 +74,7 @@ export default function Home() {
 
   return (
     <Inner>
-      <main className="font-urbanist text-[#1c140d]">
+      <main className="font-urbanist text-[#2d2926]">
         <Header></Header>
         <section className="flex flex-col md:flex-row md:h-[90dvh] lg:h-[100dvh] md:justify-between">
           <div className="flex-shrink-0 relative">
@@ -82,7 +82,7 @@ export default function Home() {
             <motion.div variants={block} className="bg-white absolute right-0 bottom-0 h-full w-full">
             </motion.div>
           </div>
-          <div className="flex flex-col md:justify-between m-5 lg:mx-10 gap-14">
+          <div className="flex flex-col md:justify-between p-5 lg:mx-10 gap-14">
             <div className="text-2xl overflow-hidden">
               {topTitles.map((elem, i) => {
                 return (
@@ -121,7 +121,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="mx-5 py-20 md:mx-10 border-y border-black">
+        <section className="mx-5 py-12 md:mx-10">
           <ul className="flex flex-col justify-between md:flex-row flex-wrap gap-4">
             {works.map((work, i) => {
               return (
@@ -158,22 +158,21 @@ export default function Home() {
             })}
           </ul>
         </section>
-        <section className="mx-5 py-10 md:mx-28">
-          <p className="mb-4 font-semibold text-2xl md:text-center">I can help you with</p>
-          <div className="flex flex-col md:flex-row gap-5 md:mx-10 md:text-center">
-            <div>
-              <p className="font-medium text-xl">Design</p>
-              <p>Currently working as a freelancer dedicated to helping my clients achieve their goals in web development.</p>
+        <section className="mx-5 pb-10 md:mx-10">
+          <ul className="flex flex-col">
+            <div className="flex flex-col md:flex-row justify-between py-5">
+              <p className="font-semibold text-2xl">Web Design</p>
+              <p>Create your ideal digital presence with a personalized and functional website.</p>
             </div>
-            <div>
-              <p className="font-medium text-xl">Develop</p>
-              <p>Currently working as a freelancer dedicated to helping my clients achieve their goals in web development.</p>
+            <div className="flex flex-col md:flex-row justify-between border-y border-[#2d2926] py-5">
+              <p className="font-semibold text-2xl">Web Development</p>
+              <p>Transform your vision into a digital reality with a custom web design.</p>
             </div>
-            <div>
-              <p className="font-medium text-xl">Full Web</p>
-              <p>Currently working as a freelancer dedicated to helping my clients achieve their goals in web development.</p>
+            <div className="flex flex-col md:flex-row justify-between py-5">
+              <p className="font-semibold text-2xl">Full Website</p>
+              <p>Create a strong digital presence with a full web design and development service.</p>
             </div>
-          </div>
+          </ul>
         </section>
         <Footer></Footer>
       </main>

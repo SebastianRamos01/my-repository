@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const navLinks = [
@@ -33,8 +33,31 @@ const dpNav = {
   },
 };
 
+// Scroll animate variants
+const scroll = {
+  visible: {
+    y: 0
+  },
+  hidden: {
+    y: "-100%"
+  }
+}
+
 export default function Header() {
+  const { scrollY } = useScroll()
+  
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false)
+
+  //On Scroll is visible
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    const prev = scrollY.getPrevious();
+    if (latest > prev && latest > 150) {
+      setIsVisible(false)
+    }else{
+      setIsVisible(true)
+    }
+  })
 
   return (
     <header className="font-urbanist w-full absolute top-0 z-10 text-white text-sm">

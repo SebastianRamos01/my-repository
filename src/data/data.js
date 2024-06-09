@@ -9,7 +9,7 @@ export const works = [
     },
     {
         title: 'in-universe',
-        header: 'A Blog of Astronomy, about theorys and objects',
+        header: 'A Blog of Astronomy, about theorys and objects from our universe.',
         rol: 'Design & Web Development',
         description: 'opencuriosity is an educational project to teach science in a more interactive way (inspired by brilliant.org) for all ages and for any level of knowledge. (Project still in design)',
         main: 'in-universe-desktop.png',

@@ -31,17 +31,18 @@ export default function Single() {
       <Header></Header>
       <section className="font-urbanist text-[#2D2926] mx-5 md:mx-10 py-14">
         <div className="my-4 w-fit">
-          <p className="text-2xl font-bold">
+          <p className="text-2xl font-semibold">
             {work.title}
           </p>
+          <p className="text-xl">{work.header}</p>
         </div>
-        <div className="bg-[#2d2926] p-5 lg:p-10 flex justify-between rounded relative">
+        <div className="bg-[#2d2926] p-5 lg:p-10 flex justify-between rounded relative my-1">
           <div className="h-[200px] overflow-hidden lg:h-[480px] md:h-[350px]">
             <img src={`/images/${work.main}`} alt={work.title} className="" />
           </div>
         </div>
         <div className="my-10">
-          <p className="text-xl">{work.header}</p>
+          <p className="font-bold">Design Objetives</p>
         </div>
         <div className="bg-[#2d2926] p-5 lg:p-10 rounded relative flex justify-center">
           <div className="h-[510px] w-80 lg:h-[550px] overflow-hidden relative">
